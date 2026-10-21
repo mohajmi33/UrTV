@@ -19,7 +19,7 @@ FONTS = {
     "__F_DISPLAY__": "ThmanyahDisplay-Bold.woff2",
 }
 # tv.html points here for fonts and bundled photos; the app answers from its assets, a browser from GitHub.
-REPO = "https://raw.githubusercontent.com/tshi-dev/UrTV/master/"
+REPO = "https://raw.githubusercontent.com/iiMihyar/UrTV/codex/nba-nfl-f1-schedule/"
 
 
 BASMALA = "بسم الله الرحمن الرحيم"   # compared without harakat: the API orders them its own way
@@ -222,6 +222,7 @@ def main():
     html = html.replace("__TEAMS_AR__", js_json(teams))
     # by TheSportsDB id: "Al-Faisaly" and "Al Faisaly" are different clubs under one name key
     clubs = json.loads((ROOT / "assets/shared/teams.json").read_text(encoding="utf-8"))
+    clubs.extend(json.loads((ROOT / "assets/shared/teams-extra.json").read_text(encoding="utf-8")))
     by_id = {c["id"]: c["ar"] for c in clubs if c.get("id") and c.get("ar")}
     html = html.replace("__TEAMS_BY_ID__", js_json(by_id))
     html = html.replace("__VERSES__", js_json(verses_for_screen()))

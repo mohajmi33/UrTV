@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>شاشة تلفزيونك</title>
 <style>
-  @font-face{font-family:'Thmanyah';font-weight:300;font-style:normal;font-display:block;src:url("https://raw.githubusercontent.com/tshi-dev/UrTV/master/assets/fonts/Thmanyah-Light.woff2") format("woff2")}
-  @font-face{font-family:'Thmanyah';font-weight:400;font-style:normal;font-display:block;src:url("https://raw.githubusercontent.com/tshi-dev/UrTV/master/assets/fonts/Thmanyah-Regular.woff2") format("woff2")}
-  @font-face{font-family:'Thmanyah';font-weight:500;font-style:normal;font-display:block;src:url("https://raw.githubusercontent.com/tshi-dev/UrTV/master/assets/fonts/Thmanyah-Medium.woff2") format("woff2")}
+  @font-face{font-family:'Thmanyah';font-weight:300;font-style:normal;font-display:block;src:url("https://raw.githubusercontent.com/iiMihyar/UrTV/codex/nba-nfl-f1-schedule/assets/fonts/Thmanyah-Light.woff2") format("woff2")}
+  @font-face{font-family:'Thmanyah';font-weight:400;font-style:normal;font-display:block;src:url("https://raw.githubusercontent.com/iiMihyar/UrTV/codex/nba-nfl-f1-schedule/assets/fonts/Thmanyah-Regular.woff2") format("woff2")}
+  @font-face{font-family:'Thmanyah';font-weight:500;font-style:normal;font-display:block;src:url("https://raw.githubusercontent.com/iiMihyar/UrTV/codex/nba-nfl-f1-schedule/assets/fonts/Thmanyah-Medium.woff2") format("woff2")}
   /* ﷺ and ﴿﴾ only (2 KB subset of Noto Naskh Arabic, OFL): Thmanyah has no glyph for them */
   @font-face{font-family:'NotoMarks';font-style:normal;font-weight:400;src:url("data:font/woff2;base64,d09GMgABAAAAAAiAAA8AAAAADmgAAAgpAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGyAcPAZgP1NUQVQuADwRCAqSQI1iATYCJAMQCwoABCAFhDwHIAwHG/wKUZROUoXiR0J2TnEFkUjLmvDhh5sN0Tbvk3riybIaqxIrUJkug1XjcJW6znQQUGfufZRwNBaNSDxg/X57qSA1ar3a8SJ0aFsFFeoMrHu6uw9ZqqdPfyV8ggp1hsFXTN8d8XvH1CZVfRWqErYoP+NnTN6V7t51wPlDVADs5IQi8Mi+Uk64KSf3WtPm5BQ5Qlvj1VMABAA6OSVoiEvJAVQoAIDVKs+wSgIEwQ5Sz436SuC8HGRshvGtsaYpftJ3GNYSW5BAUzk04wQAfsIFAIDkZn/QBOjcA32ZkeBa8WN6PDjUF9b3B3XrMwGAPeDBG8oFUMPQFgiVUj4cKwff6+o7DD0AhgSAw4yk/gMIBZnwo4wUKMdIcG0sBP6H9/05hF+ctIF4FKYtCwhEKxtRFFrqkARAutScV0aAYfXlREaVBENAKOlCBmE9QVCGv0vtQogItHAIc1Alk0aslC/V+nue9HnfD9ff37kfzXQmkYaTQGogMDg8VRSOEB5jiNTbV6Xx67B2LKLL83u7d7HWI93myssktppRa5rNvhC8A3oYy/fn8bafJkY4PD6zcrWzAagDBCdgvrl6oOdyHsa/QX02Syl2K2bPcrn43e3bqOYmNQs+1E85Y14+VgeXW9e+uSSk27RIeEJ4cub73X01qE2nkPR524tJn06hUKXXyykjWjR443c+VM7SXDeIP7KPDFcKVtOCsu/f6ffDxGDlowWAh/WBhNZtL6X0uA4jjY/sdjElXDIdh5F+uVNEEcws0sIpvSRCDuzzQjOoCRTusjJSrbd6mhtWk7JS3pz3vBUc4LqUYAKVEn6WY/zv4ZwyctRLWNwVBy9mj6g6wI1qzSbVzYp2XaDNTFi05QAjuKj2/aD+Z3CT5kP49IlLu0HTTc44Q+ZHtDjPj3XOGi+DoNdjpE1GeHnd/57HshEE0GYj5V3MCNpTN3Ac5moChbdR3efP7yFzPfUmOBadOBsFWRglV3W3rG7rtDjmsQaxdrBu6VMOzZBxPgg6jsNYmrnO5uI4oBdO1zgILNeNJtd/rK9CaDAA3Sw29pV5eStOiXuO682rhF1rX5q3mF2x7TWmy/ZU6ychb2Y2C2UrGZOvqoRzdtEnHYBGbT3ImHxYYQEjr50bPMkMjRIJ5swBI+c2vvRFEM211CIS+oI+DG2V10i7zcJ5g86bjxiOWgdG9hhH3ZCaly07jrHU8kddxMyR1+RVk2+6dO+pLrkWsnJ7nqxKnMECWP8UFHl3fPbibHBllya1k3ZtReIOoI+GsOS36yM2DbwzKCWTqM7Era9nth+/cKPrf170x315H0wNj6q2Lb2o431+xFYfROPHRK5/m2wELXWw4smm05LCYYmlljUDwdG4nv8x066u66tr+Ajif5sn3GkozqJXt3stkrYTdE1YB/XG7KQTesTgnvJnvU/pIWLQx1r9JO9PgygX9koKDAWGiWvGb45c/6bEEUnHFS5uuwY9Yqs2fdMtvqS1afmW/8FU/qNh/p/vbQVJb8c0J4mbGHMVlpaZYoS36dtY1GeGdnb2pSUrfnjiGW7S71+0WlL93WHOYwb+MOgwuddu4u/XVCgFioPMV90p07r/mgg5X8XyrIILKZSapFlJD5lYO1l2pnT1DA71F901HYnyv9Q1oVxAzzYOWbiIw/M+vz+a1HhZfdi2rhUagvzZc6KXFH4J0pKQ8al+fgaV8jHQULtHYHFdZS/CBTbkKjOX6dBpn5cfhVr+zeXL5TKU2LmSo5mKRhATKNHdf8fhg/DpHPr12CyeS66dJoY+4erBqM9bMSRiGrZZC2iV945wLJrkolGa3r8mIUjMMI4LXCownisHdP81SeA4aDSzIfE3A6/+mnVM7xWRE20ngA8vYKhSzxZOlggHyG8Ndj0KA32zaiVJqi591YhaWJEiHm2Mm2W6MIbJkVC1F67aeDpEO6G0xUe+UoXcbcdtSGpP3h1SkHPXxoebIJrHLKcxeAzGjheOohi/rmXL3Vr4R6iYXnN42uyZDBZ3Ji+QH9pSOIyJZGgMy9MTexRezzZQWLknlWWhocEE/U6xPX0yxCf9VpHMghPasVm5sfQEXGqfc09CITnFvbWyd2cEVF3BqtYuLS2OEe9tYS6/eEwomfPCEqxac/W4+ieRM5D2NSMkdVUXe8BAm9qJfXV+j7J6mTkDf3+tfLV983jVwOqH52OzY+0/HX3N2HV8zu/sth47l+xbyFlSrLJVySI5fEV9W75QK49J8x4zkPjAYrbMwIQI3YRxeBgB31KNZtKFaFAABEF4b0ajA8aksNFtPjt0yx5zOo83Rwp421iCJ+x1rkiFgp3owODbfNLND7sLELQiA9HtITv7WPHXvnt8SZynIaZy0nUHrxqHX/9n4VIxtJeXWs4O+U5FkFcAAHDv/vIjAADwfPqGSiutb4vHDGwYAAAHSzP/dbXHlxP9Z0Ph6n42Gk0gM3wD1GK8cz4MvEDU6J9AlkcDV2xVpJpmNo0RAsq0yHZnEAfR6nYwln0OEeOMQ+kCy2GkIcLh3ENRKYtfmHBPCAAiHADRWrUZxKhBnXod1HQ8gehqycFtDdK00tIaIINRk0ZKqwSI1KlJPQGjfqg6ekKHthpBPIaWOg08z0YldylatVD1Bn5RqxVBh34E9IzAc23DTqeFkUbPamlSv+gK5vwsNep0apa36LhvfrSXYPHSh454wU3e0+p0D7dgswvvpc5a8tQcXxsOs0O9lS1cfu2ro6fpqGG4JG2WEi79GnW/9FAnH8k/Xh2iL8+6nc7YXZB13AudCg==") format("woff2")}
-  @font-face{font-family:'ThmanyahDisplay';font-weight:700;font-style:normal;font-display:block;src:url("https://raw.githubusercontent.com/tshi-dev/UrTV/master/assets/fonts/ThmanyahDisplay-Bold.woff2") format("woff2")}
+  @font-face{font-family:'ThmanyahDisplay';font-weight:700;font-style:normal;font-display:block;src:url("https://raw.githubusercontent.com/iiMihyar/UrTV/codex/nba-nfl-f1-schedule/assets/fonts/ThmanyahDisplay-Bold.woff2") format("woff2")}
 
   :root{
     --sand:#F6EFE0;
@@ -130,6 +130,30 @@
   .week li.quote .nar .saw{font-size:1.45em}
   .week li.src{border-bottom:none;padding:.6vh 0 0;font-size:clamp(12px,.95vw,18px);color:#D6AF6B}
   .week .empty{color:#9A9078;font-size:clamp(14px,1.1vw,21px);font-weight:300;margin-top:1vh}
+  .week.matches-view{align-self:center}
+  .week.matches-view > ul li.match{display:block;white-space:normal;padding:.55vh 0}
+  .week.matches-view .match-title{font-size:clamp(15px,.98vw,19px);line-height:1.4;color:#F6EEDC}
+  .week.matches-view .match-title .versus{color:#D6AF6B;padding:0 .3em}
+  .week.matches-view .match-meta{display:flex;justify-content:space-between;gap:.8em;margin-top:.25vh;font-size:clamp(11px,.72vw,14px);line-height:1.35;color:#A99E86}
+  .week.matches-view .match-meta span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .week.matches-view .match-meta .match-venue{color:#CFC3A9}
+  .week.matches-view .match-status{color:#E0BA74}
+  .week.matches-view .match-last{margin-top:.3vh;font-size:clamp(10px,.66vw,12px);line-height:1.35;color:#A99E86;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .week:not(.matches-view) #f1-panel{display:none}
+  .stage.matches-mode .p-match > .label,.stage.matches-mode #match-row{display:none}
+  .stage.matches-mode .corner-hadith{display:block}
+  .corner-hadith{display:none;max-width:100%;direction:rtl;text-align:right}
+  .corner-hadith-label{font-size:clamp(12px,.88vw,16px);letter-spacing:.04em;color:#D6AF6B;margin-bottom:.35vh}
+  .corner-hadith-text{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;
+    font-size:clamp(12px,.78vw,15px);line-height:1.55;color:#F6EEDC}
+  .corner-hadith-text.changing{animation:hadithIn .55s ease both}
+  .corner-hadith-text .nar{font-size:.88em;color:#B9AE96}
+  .corner-hadith-text .saw{font-family:'NotoMarks','Noto Naskh Arabic',serif;color:#D6AF6B;font-size:1.35em;line-height:1;vertical-align:-.1em}
+  .corner-hadith-source{margin-top:.3vh;font-size:clamp(10px,.66vw,12px);line-height:1.3;color:#A99E86}
+  @keyframes hadithIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  .p-prayer .sub{white-space:normal;line-height:1.45}
+  .p-prayer .sub .count-line{display:block}
 
   .dates{text-align:right;flex-shrink:0}
   .hijri{font-size:clamp(19px,1.86vw,37px);font-weight:500;color:var(--sand);line-height:1.3}
@@ -208,6 +232,17 @@
   .mblock .big > span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;
     padding-bottom:.3em;margin-bottom:-.3em}  /* room for the dots under ي, ج… */
   .none-week{font-size:clamp(26px,2.5vw,54px);font-weight:700;font-family:'ThmanyahDisplay','Thmanyah',serif;color:#A79C85}
+  .f1-panel{margin-top:1.25vh;padding-top:.7vh;border-top:1px solid rgba(220,184,111,.20)}
+  .f1-head{display:flex;justify-content:space-between;align-items:baseline;gap:.7em}
+  .f1-title{font-size:clamp(11px,.88vw,16px);font-weight:500;color:#D6AF6B;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .f1-location{font-size:clamp(10px,.72vw,13px);font-weight:300;color:#9C9279;white-space:nowrap}
+  .f1-sessions{display:grid;grid-template-columns:1fr;gap:.15vh;margin-top:.45vh}
+  .f1-session{display:grid;grid-template-columns:minmax(5.2em,.9fr) minmax(0,1.5fr) auto;align-items:baseline;gap:.55em;
+    font-size:clamp(10px,.76vw,14px);line-height:1.25;color:#DED4C0;white-space:nowrap}
+  .f1-day{color:#9C9279;font-size:.9em}
+  .f1-session-name{overflow:hidden;text-overflow:ellipsis}
+  .f1-time{color:#E0BA74;font-variant-numeric:tabular-nums}
+  .f1-empty{font-size:clamp(10px,.76vw,14px);color:#9C9279}
 
   /* A new photo settles in over a minute, then holds still: an endless drift kept the TV redrawing
      the whole screen 60 times a second, for hours. */
@@ -290,6 +325,7 @@
     <div class="week">
       <div class="hd" id="week-hd">هذا الأسبوع</div>
       <ul id="week-list"><li class="empty">جارٍ التحميل…</li></ul>
+      <div class="f1-panel" id="f1-panel"><div class="f1-empty">جارٍ تحميل جدول الفورمولا ١…</div></div>
     </div>
   </section>
 
@@ -311,6 +347,11 @@
       <div class="mrow" id="match-row">
         <div class="none-week">لا شيء هذا الأسبوع</div>
       </div>
+      <div class="corner-hadith" id="corner-hadith">
+        <div class="corner-hadith-label">أحاديث نبوية</div>
+        <div class="corner-hadith-text" id="corner-hadith-text"></div>
+        <div class="corner-hadith-source" id="corner-hadith-source"></div>
+      </div>
     </div>
   </footer>
 
@@ -319,11 +360,11 @@
 <script>
 // daily background: one photo per Riyadh day, deterministic
 const BGS = [
-  {u:"https://raw.githubusercontent.com/tshi-dev/UrTV/master/assets/backgrounds/9hWJs7iblh8.jpg", c:"NEOM · Unsplash", d:0.9},
-  {u:"https://raw.githubusercontent.com/tshi-dev/UrTV/master/assets/backgrounds/XDtzu1D2P8c.jpg", c:"NEOM · Unsplash", d:0.84},
-  {u:"https://raw.githubusercontent.com/tshi-dev/UrTV/master/assets/backgrounds/t3dlLOhdEzs.jpg", c:"NEOM · Unsplash", d:0.99},
-  {u:"https://raw.githubusercontent.com/tshi-dev/UrTV/master/assets/backgrounds/LAj90eAXOZA.jpg", c:"NEOM · Unsplash", d:0.96},
-  {u:"https://raw.githubusercontent.com/tshi-dev/UrTV/master/assets/backgrounds/f5ZB0LHwi0s.jpg", c:"Hala AlGhanim · Unsplash", d:0.88}
+  {u:"https://raw.githubusercontent.com/iiMihyar/UrTV/codex/nba-nfl-f1-schedule/assets/backgrounds/9hWJs7iblh8.jpg", c:"NEOM · Unsplash", d:0.9},
+  {u:"https://raw.githubusercontent.com/iiMihyar/UrTV/codex/nba-nfl-f1-schedule/assets/backgrounds/XDtzu1D2P8c.jpg", c:"NEOM · Unsplash", d:0.84},
+  {u:"https://raw.githubusercontent.com/iiMihyar/UrTV/codex/nba-nfl-f1-schedule/assets/backgrounds/t3dlLOhdEzs.jpg", c:"NEOM · Unsplash", d:0.99},
+  {u:"https://raw.githubusercontent.com/iiMihyar/UrTV/codex/nba-nfl-f1-schedule/assets/backgrounds/LAj90eAXOZA.jpg", c:"NEOM · Unsplash", d:0.96},
+  {u:"https://raw.githubusercontent.com/iiMihyar/UrTV/codex/nba-nfl-f1-schedule/assets/backgrounds/f5ZB0LHwi0s.jpg", c:"Hala AlGhanim · Unsplash", d:0.88}
 ];
 // the app passes the chosen city in the URL fragment: #city=..&lat=..&lon=..&tz=..
 const _Q = new URLSearchParams((location.hash || '').replace(/^#/, ''));
@@ -343,7 +384,7 @@ const CONFIG = {
   // the card beside the clock: shows | prayers | forecast | matches | verse | none (#week=0 from older builds = none)
   panel: (p => ['shows','prayers','forecast','matches','verse','none'].includes(p) ? p : 'verse')
          (_Q.get('panel') || (_Q.get('week') === '0' ? 'none' : 'verse')),
-  matchesPerPage: 2,
+  matchesPerPage: 1,
   matchPageMs: 15000,
   // minutes from adhan to iqama (Ministry of Islamic Affairs defaults); Friday Dhuhr has none
   iqama: {Fajr:25, Dhuhr:20, Asr:20, Maghrib:10, Isha:20},
@@ -494,6 +535,10 @@ function humanRemaining(sec){
   if(m || !h) out.push(qty(m,UNIT.min));
   return out.join(' و ');
 }
+function minuteSecond(sec){
+  sec = Math.max(0, Math.floor(sec));
+  return `${ar(String(Math.floor(sec/60)).padStart(2,'0'))}:${ar(String(sec%60).padStart(2,'0'))}`;
+}
 function shortRemaining(ms){
   const d = Math.floor(ms/86400000), h = Math.floor((ms%86400000)/3600000);
   const out = [];
@@ -525,12 +570,13 @@ function tickPrayer(){
     return mins >= at && mins < at + gap;
   });
   if(cur){
-    const left = (cur.h*60 + cur.mi + CONFIG.iqama[cur.key]) - mins;
+    const gap = (cur.key === 'Dhuhr' && isFriday()) ? 0 : (CONFIG.iqama[cur.key] || 0);
+    const left = (cur.h*60 + cur.mi + gap)*60 - (p.h*3600 + p.mi*60 + p.s);
     panel.classList.add('now');
     elL.textContent = 'حان الآن';
     elN.textContent = prayerName(cur);
     elT.textContent = fmt12(cur.h, cur.mi);
-    elC.innerHTML = 'الإقامة بعد <b>' + humanRemaining(Math.max(60, Math.ceil(left)*60)) + '</b>';
+    elC.innerHTML = 'الإقامة بعد <b>' + minuteSecond(left) + '</b> دقيقة';
     return;
   }
 
@@ -540,9 +586,14 @@ function tickPrayer(){
   const leftM = next ? (next.h*60 + next.mi) - mins
                      : (PRAYERS[0].h*60 + PRAYERS[0].mi) + 1440 - mins;
   if(!next) next = PRAYERS[0];
+  const gap = (next.key === 'Dhuhr' && isFriday()) ? 0 : (CONFIG.iqama[next.key] || 0);
+  const untilIqama = Math.max(0, Math.round(leftM*60) + gap*60);
   elN.textContent = prayerName(next);
   elT.textContent = fmt12(next.h, next.mi);
-  elC.innerHTML = 'بعد <b>' + humanRemaining(Math.max(0, Math.round(leftM*60))) + '</b>';
+  const noSeparateIqama = next.key === 'Dhuhr' && isFriday();
+  elC.innerHTML = '<span class="count-line">الأذان بعد <b>' + humanRemaining(Math.max(0, Math.round(leftM*60)))
+    + '</b></span><span class="count-line">' + (noSeparateIqama ? 'الجمعة بعد ' : 'الإقامة بعد ')
+    + '<b>' + minuteSecond(untilIqama) + '</b> دقيقة</span>';
 }
 
 let RAM_CACHE = {day:'', val:null};
@@ -613,13 +664,13 @@ function tickRamadan(){
         .format(new Date(Date.UTC(st.y, st.mo-1, st.d, 12)));
 }
 
-const TEAM_AR = {"Al-Hilal": "الهلال", "Al-Hazem": "الحزم", "Al-Nassr": "النصر", "Al-Ittihad": "الاتحاد", "Al-Ahli": "الأهلي", "Al-Shabab": "الشباب", "Al-Taawoun": "التعاون", "Al-Ettifaq": "الاتفاق", "Al-Fateh": "الفتح", "Al-Riyadh": "الرياض", "Damac": "ضمك", "Al-Khaleej": "الخليج", "Al-Fayha": "الفيحاء", "Al-Okhdood": "الأخدود", "Al-Qadsiah": "القادسية", "Al-Kholood": "الخلود", "Neom": "نيوم", "Al-Najma": "النجمة", "Saudi Arabia": "السعودية", "Al-Wehda": "الوحدة", "Al-Raed": "الرائد", "Abha": "أبها", "Al-Taee": "الطائي", "Al-Orobah": "العروبة", "Al-Wahda": "الوحدة", "Al-Batin": "الباطن", "Al-Faisaly": "الفيصلي", "Al-Adalah": "العدالة", "Al-Jabalain": "الجبلين", "Al-Ain": "العين", "Al-Hazm": "الحزم", "Al-Tai": "الطائي", "Ohod": "أحد", "Al-Jandal": "الجندل", "Al-Arabi": "العربي", "Real Madrid": "ريال مدريد", "Barcelona": "برشلونة", "Atletico Madrid": "أتلتيكو مدريد", "Manchester City": "مانشستر سيتي", "Manchester United": "مانشستر يونايتد", "Liverpool": "ليفربول", "Arsenal": "آرسنال", "Chelsea": "تشيلسي", "Tottenham Hotspur": "توتنهام", "Newcastle United": "نيوكاسل", "Bayern Munich": "بايرن ميونخ", "Borussia Dortmund": "دورتموند", "Paris SG": "باريس سان جيرمان", "Juventus": "يوفنتوس", "AC Milan": "ميلان", "Inter Milan": "إنتر ميلان", "Al Ahly": "الأهلي المصري", "Zamalek": "الزمالك", "Real Sociedad": "ريال سوسيداد", "Sevilla": "إشبيلية", "Valencia": "فالنسيا", "Villarreal": "فياريال", "Athletic Bilbao": "أتلتيك بلباو", "Real Betis": "ريال بيتيس", "Girona": "جيرونا", "Aston Villa": "أستون فيلا", "West Ham United": "وست هام", "Everton": "إيفرتون", "Brighton and Hove Albion": "برايتون", "Leicester City": "ليستر سيتي", "Nottingham Forest": "نوتنغهام فورست", "Wolverhampton Wanderers": "وولفرهامبتون", "Crystal Palace": "كريستال بالاس", "Fulham": "فولهام", "Brentford": "برينتفورد", "Bournemouth": "بورنموث", "Bayer Leverkusen": "باير ليفركوزن", "RB Leipzig": "لايبزيغ", "Eintracht Frankfurt": "آينتراخت فرانكفورت", "VfB Stuttgart": "شتوتغارت", "Borussia Monchengladbach": "بوروسيا مونشنغلادباخ", "Schalke 04": "شالكه", "Napoli": "نابولي", "AS Roma": "روما", "Lazio": "لاتسيو", "Atalanta": "أتالانتا", "Fiorentina": "فيورنتينا", "Marseille": "مارسيليا", "Lyon": "ليون", "Monaco": "موناكو", "Lille": "ليل", "Nice": "نيس", "Benfica": "بنفيكا", "Porto": "بورتو", "Sporting CP": "سبورتينغ لشبونة", "Ajax": "أياكس", "PSV Eindhoven": "آيندهوفن", "Feyenoord": "فينورد", "Galatasaray": "غلطة سراي", "Fenerbahce": "فنربخشة", "Besiktas": "بشكتاش", "Trabzonspor": "طرابزون سبور", "Celtic": "سلتيك", "Rangers": "رينجرز", "Inter Miami": "إنتر ميامي", "LA Galaxy": "لوس أنجلوس جالاكسي", "Al Ain": "العين", "Shabab Al-Ahli": "شباب الأهلي", "Al Wahda": "الوحدة الإماراتي", "Al Jazira": "الجزيرة", "Sharjah": "الشارقة", "Al Wasl": "الوصل", "Al Sadd": "السد", "Al Duhail": "الدحيل", "Al Rayyan": "الريان", "Al Gharafa": "الغرافة", "Al Arabi": "العربي", "Al Kuwait": "الكويت", "Al Qadsia": "القادسية الكويتي", "Pyramids": "بيراميدز", "Wydad Casablanca": "الوداد", "Raja Casablanca": "الرجاء", "Esperance": "الترجي", "Al Faisaly": "الفيصلي الأردني", "Al Wehdat": "الوحدات", "Al Shorta": "الشرطة", "Al Zawraa": "الزوراء", "Persepolis": "برسبوليس", "Esteghlal": "استقلال", "Ulsan HD": "أولسان", "Urawa Red Diamonds": "أوراوا", "Japan": "اليابان", "South Korea": "كوريا الجنوبية", "Australia": "أستراليا", "Iran": "إيران", "Iraq": "العراق", "Qatar": "قطر", "United Arab Emirates": "الإمارات", "Kuwait": "الكويت", "Bahrain": "البحرين", "Oman": "عُمان", "Jordan": "الأردن", "Syria": "سوريا", "Lebanon": "لبنان", "Palestine": "فلسطين", "Yemen": "اليمن", "Egypt": "مصر", "Morocco": "المغرب", "Algeria": "الجزائر", "Tunisia": "تونس", "China": "الصين", "Uzbekistan": "أوزبكستان", "Indonesia": "إندونيسيا", "Al-Anwar": "الأنوار", "Al-Bukiryah": "البكيرية", "Al-Jel": "الجيل", "Al-Jeel": "الجيل", "Al-Najma Unaizah": "النجمة", "Al-Akhdoud": "الأخدود", "Al-Zulfi": "الزلفي", "Jeddah": "جدة", "Al-Ula": "العلا", "Al-Diriyah": "الدرعية", "Al-Safa": "الصفا", "Al-Jubail": "الجبيل", "Hajer": "هجر", "Al-Qaisumah": "القيصومة", "Al-Kawkab": "الكوكب", "Al-Sahel": "الساحل", "Al-Washm": "الوشم", "Al-Nahda": "النهضة", "Al-Taawon": "التعاون", "Damac FC": "ضمك", "Al-Riyadh SC": "الرياض", "Al-Khaleej Saihat": "الخليج", "Al-Fayha FC": "الفيحاء", "Al-Ittihad Jeddah": "الاتحاد", "Al-Ahli Jeddah": "الأهلي", "Al-Ahli Saudi": "الأهلي", "Al-Nassr Riyadh": "النصر", "Al-Shabab Riyadh": "الشباب", "Al-Ettifaq Dammam": "الاتفاق", "Al-Qadisiyah": "القادسية", "Ittihad FC": "الاتحاد", "Al-Ittihad Club (Jeddah)": "الاتحاد", "Al-Ittihad Club Saudi Arabia": "الاتحاد", "Al-Ittihad Football Club": "الاتحاد", "Al Ittihad FC": "الاتحاد", "Ohod Club": "أحد", "Ohod Saudi Football Club": "أحد", "Ohob Club": "أحد", "Ohud Medina": "أحد", "Al Ahli Jeddah": "الأهلي", "Al Ahli Saudi FC": "الأهلي", "Al Ahli FC": "الأهلي", "Al-Ahli Saudi FC": "الأهلي", "Al Ahli Saudi": "الأهلي", "Al Ahli Jeddah FC": "الأهلي", "Al Ahli Football Club": "الأهلي", "Al Ahli Sports Club": "الأهلي", "Al-Wehda FC": "الوحدة", "Al Wehda FC": "الوحدة", "Al-Khaleej FC": "الخليج", "Al-Khaleej Club of Saihat": "الخليج", "Khaleej FC": "الخليج", "Ettifaq Dammam": "الاتفاق", "Al-Ettifaq Club": "الاتفاق", "Ettifaq FC": "الاتفاق", "Al-Ettifaq FC": "الاتفاق", "Al Shabab": "الشباب", "Al Shabab Club": "الشباب", "Al Shabab FC": "الشباب", "Al-Shabab Football Club": "الشباب", "Al Tuhami Club": "التهامي", "Al-Safa Club": "الصفا", "Al Safa FC": "الصفا", "Al-Nahda Club (Saudi Arabia)": "النهضة", "Hajer FC": "هجر", "Hajer Club": "هجر", "Al-Feiha FC": "الفيحاء", "Al-Fayha Club": "الفيحاء", "Al-Ansar FC (Saudi Arabia)": "الأنصار", "Al-Ansar": "الأنصار", "Al Raed S.FC": "الرائد", "Al-Ra'ed": "الرائد", "Al-Raed FC": "الرائد", "Al Nassr Football Club": "النصر", "Al-Nassr F.C.": "النصر", "Al Nassr": "النصر", "Al-Nassr FC": "النصر", "Al Nassr FC": "النصر", "Al-Taawoun FC": "التعاون", "Al-Taawon FC": "التعاون", "Al Taawoun FC": "التعاون", "Al-Hedaya Club": "الهداية", "Al-Majd Club": "المجد", "Al-Hilal Saudi Club": "الهلال", "Al Hilal": "الهلال", "Al Hilal SC": "الهلال", "Al Hilal SFC": "الهلال", "Al-Hilal SFC": "الهلال", "Al Hilal Saudi Club": "الهلال", "Al-Hilal SC": "الهلال", "Al-Hazem FC": "الحزم", "Al Hazem SC": "الحزم", "Al Fateh SC": "الفتح", "Al-Arabi SC (Saudi Arabia)": "العربي", "Al-Jabalain Club": "الجبلين", "Al Jabalain": "الجبلين", "Al-Watani": "الوطني", "Al-Watani Club": "الوطني", "Al-Najma SC (Saudi Arabia)": "النجمة", "Bisha FC": "بيشة", "Al-Tai FC": "الطائي", "Al-Bukiryah FC": "البكيرية", "Al-Sharq Club": "الشرق", "Sharq COD": "الشرق", "Munief SC": "منيف", "Al-Shoalah": "الشعلة", "Al-Shoulla FC": "الشعلة", "Al-Salam Saudi Club": "السلام", "Al-Omran Club": "العمران", "Category:Al-Omran Club players": "العمران", "Baish Club": "بيش", "Tuwaiq Club": "طويق", "Al-Badaya Club": "البدائع", "Neom SC": "نيوم", "Neom Sports Club": "نيوم", "Al-Suqoor Club": "نيوم", "Al Jubail Club": "الجبيل", "Al-Jubail Club": "الجبيل", "Abha Club": "أبها", "Radwa Club": "رضوى", "Al-Jazira Club": "الجزيرة", "Al-Washm Club": "الوشم", "AlQadsiah": "القادسية", "Al-Qadsiah FC": "القادسية", "Qadsiah FC": "القادسية", "Al-Qadsiah Saudi Club of Kings": "القادسية", "Al-Qadsiah SC": "القادسية", "Qadsiah SC": "القادسية", "Al Qadsiah FC": "القادسية", "Al-Qadsiah Saudi Club": "القادسية", "AlQadsiah SC": "القادسية", "Jeddah Club": "جدة", "Al-Ibtisam Club": "الابتسام", "Heraa FC": "حراء", "Okaz Club": "عكاظ", "Al-Alameen Club": "العلمين", "Al-Kawkab FC": "الكوكب", "Al Kawkab Football Club": "الكوكب", "Al Kawkab FC": "الكوكب", "Al-Zulfi FC": "الزلفي", "Al-Qaisumah FC": "القيصومة", "Al-Kholood Club": "الخلود", "Al-Yarmuk Club (Saudi Arabia)": "اليرموك", "Mudhar Club": "مضر", "Al-Noor FC": "النور", "Al-Ard Club": "العرض", "Al-Hamadah Club": "الحمادة", "Al-Taqadom FC": "التقدم", "Damac Club": "ضمك", "Al-Anwar Club": "الأنوار", "Al-Thoqbah Club": "الثقبة", "Al-Amjad F.C.": "الأمجاد", "Al-Qala Club": "القلعة", "Al-Jewaa Club": "الجواء", "Sajir Club": "ساجر", "Sajer FC": "ساجر", "Al-Houra FC": "الحوراء", "Al-Houra Club": "الحوراء", "Al-Zayton Club": "الزيتون", "Al-Orobah F.C.": "العروبة", "Al-Orobah FC": "العروبة", "Al-Mujazzal Club": "المجزل", "Al-Qurayat Club": "القريات", "Al-Lewaa Club": "اللواء", "Wej Sports Club": "وج", "Weg SC": "وج", "Wej SC": "وج", "Al-Hait Club": "الحائط", "Al Hait Club": "الحائط", "Al Dera'a FC": "الدرع", "Al-Dera'a FC": "الدرع", "Sudair Club": "سدير", "Al-Diriyah Club": "الدرعية", "Diriyah Club": "الدرعية", "Al-Hada Club": "الهدى", "Al-Jeel Club": "الجيل", "Al-Rawdhah Club": "الروضة", "Al-Rawdah Club": "الروضة", "Al-Nojoom FC": "النجوم", "Al-Waad FC": "الوعد", "Arar FC": "عرعر", "Arar F.C.": "عرعر", "Al-Areen Club": "العرين", "Hetten FC": "حطين", "Al Okhdood": "الأخدود", "Al-Okhdood Club": "الأخدود", "Al Okhdood Club": "الأخدود", "Sharurah Club": "شرورة", "Al Bahah Club": "الباحة", "Al-Jandal SC": "الجندل", "Al Jandal Club": "الجندل", "Afif FC": "عفيف", "Al-Tasamoh FC": "القنفذة", "Al-Tasamoh FC (Saudi)": "القنفذة", "Al-Khaldi Club": "الخالدي", "Al-Mehmal Club": "المحمل", "Al-Qarah FC (Saudi)": "القارة", "Al-Qarah FC": "القارة", "Al-Muzahimiyyah Club": "المزاحمية", "Al-Muzahmiyya Club": "المزاحمية", "Al-Tadamon Club": "التضامن", "Najd FC": "نجد", "Al-Sarawat FC": "السروات", "Al-Qotah Club (Saudi)": "الغوطة", "Al-Gottah FC": "الغوطة", "Al-Sir Club": "السر", "Qaryat Al-Ulya Club": "قرية العليا", "Artawi Al-Raqas Club": "الأرطاوي", "Al-Muheet SC": "المحيط", "Al-Waseel Club": "الوصيل", "Al-Tobad Club": "التوباد", "Al-Wadi Al-Akhdar Club": "الوادي", "Al Oyoon FC": "العيون", "Al-Ain FC (Saudi Arabia)": "العين", "Al-Ain FC": "العين", "Kumait FC": "كميت", "Al Entsar FC": "الانتصار", "Al-Entesar Club": "الانتصار", "Jubbah Club": "جبة", "Jubbah FC": "جبة", "Al-Aghar Club": "الأغر", "Mossdah FC": "مصدة", "Al-Khuwaildiyah FC": "الخويلدية", "Al-Ghazwa Club": "الغزوة", "Al Ghazwah FC": "الغزوة", "Al-Sadd FC": "السد", "Al-Sadd FC (Saudi Arabia)": "السد", "Thahlan Club": "ثهلان", "Al Batin FC": "الباطن", "Al-Sahel FC": "الساحل", "Al-Sahel SC (Saudi Arabia)": "الساحل", "Ras Tanura SC": "رأس تنورة", "Al-Asyah FC": "الأسياح", "Jerash FC": "جرش", "Jarash Club": "جرش", "Al-Shaheed FC": "الشهيد", "Al Selmiyah Club": "السلمية", "Al-Rayyan Club": "الريان", "Al-Rayyan Club (Saudi Arabia)": "الريان", "Al-Hejaz Club": "الحجاز", "Al Hejaz Club": "الحجاز", "Al-Taraf Club": "الطرف", "Najran S.FC": "نجران", "Najran Sport Club": "نجران", "Najran SC": "نجران", "Al-Sawari Club": "الصواري", "Al-Helaliah FC": "الهلالية", "Feid SC": "فيد", "Al-Ula FC": "العلا", "Al-Ula Club": "العلا", "Al-Bateen SC": "البطين", "Al-Taraji Club": "الترجي", "Al-Shurooq Club": "الشروق", "Al-Fursan Club": "الفرسان", "Al-Sahari Club": "الصحاري", "Sdoos Club": "سدوس", "Ushaiger Club": "أشيقر", "Al-Khabra Club": "الخبراء", "Duba Club": "ضباء", "Al-Maseef SC": "المصيف", "Al-Qous FC": "القوس", "Al-Qaws Club": "القوس", "Al-Nairyah Club": "النعيرية", "Al-Adalh FC": "العدالة", "Al Adalah Club": "العدالة", "Al-Saqer FC": "الصقر", "Al-Saqr Club": "الصقر", "Qafar Club": "قفار", "Tayma Club": "تيماء", "Al-Entelaq FC": "الانطلاق", "Al-Lith Club": "الليث", "Al-Farouk Club": "الفاروق", "Al-Dahab Club": "الذهب", "Almaa Club": "ألمع", "Tabarjal SC": "طبرجل", "Al-Qwarah Club": "القوارة", "Al-Watan FC": "الوطن", "Sameera FC": "سميراء", "Al-Fao Club": "الفاو", "Qilwah Club": "قلوة", "Haql Club": "حقل", "Khaybar SC": "خيبر", "Hubuna SC": "حبونا", "Al-Bajadiyah FC": "البجادية", "Al-Ashaa Club": "بقيق", "Al-Aqeeq FC": "النخل", "Dhamk": "ضمك", "Al-Arabi Al-Saudi": "العربي", "Mallorca": "مايوركا", "Cremonese": "كريمونيزي", "Genoa": "جنوى", "Lecce": "ليتشي", "Sassuolo": "ساسولو", "Freiburg": "فرايبورغ", "Hoffenheim": "هوفنهايم", "Stuttgart": "شتوتغارت", "Angers": "أنجيه", "Auxerre": "أوكسير", "Brest": "بريست", "Le Havre": "لوهافر", "Lens": "لانس", "Nantes": "نانت", "Rennes": "رين", "Strasbourg": "ستراسبورغ", "AVS": "آفس", "Estoril Praia": "إستوريل", "Tondela": "تونديلا", "Excelsior": "إكسلسيور", "Groningen": "خرونينغن", "Heerenveen": "هيرنفين", "Willem II": "فيليم الثاني", "Amed": "آمد", "Gaziantep": "غازي عنتاب", "Göztepe": "غوزتبه", "Konyaspor": "قونيا سبور", "Rizespor": "ريزه سبور", "Çorum": "تشوروم", "Al-Mokawloon al-Arab": "المقاولون العرب", "National Bank of Egypt": "البنك الأهلي المصري", "Petrojet": "بتروجت", "Smouha": "سموحة", "Tala'ea El Gaish": "طلائع الجيش", "Ajman": "عجمان", "Al Bataeh": "البطائح", "Al Nasr": "النصر الإماراتي", "Dibba Al-Fujairah": "دبا الفجيرة", "Hatta": "حتا", "Khorfakkan": "خورفكان", "Al-Ahli Doha": "الأهلي القطري", "Al-Shahaniya": "الشحانية"};   // assets/shared/teams-ar.json
+const TEAM_AR = {"Al-Hilal": "الهلال", "Al-Hazem": "الحزم", "Al-Nassr": "النصر", "Al-Ittihad": "الاتحاد", "Al-Ahli": "الأهلي", "Al-Shabab": "الشباب", "Al-Taawoun": "التعاون", "Al-Ettifaq": "الاتفاق", "Al-Fateh": "الفتح", "Al-Riyadh": "الرياض", "Damac": "ضمك", "Al-Khaleej": "الخليج", "Al-Fayha": "الفيحاء", "Al-Okhdood": "الأخدود", "Al-Qadsiah": "القادسية", "Al-Kholood": "الخلود", "Neom": "نيوم", "Al-Najma": "النجمة", "Saudi Arabia": "السعودية", "Al-Wehda": "الوحدة", "Al-Raed": "الرائد", "Abha": "أبها", "Al-Taee": "الطائي", "Al-Orobah": "العروبة", "Al-Wahda": "الوحدة", "Al-Batin": "الباطن", "Al-Faisaly": "الفيصلي", "Al-Adalah": "العدالة", "Al-Jabalain": "الجبلين", "Al-Ain": "العين", "Al-Hazm": "الحزم", "Al-Tai": "الطائي", "Ohod": "أحد", "Al-Jandal": "الجندل", "Al-Arabi": "العربي", "Real Madrid": "ريال مدريد", "Barcelona": "برشلونة", "Atletico Madrid": "أتلتيكو مدريد", "Manchester City": "مانشستر سيتي", "Manchester United": "مانشستر يونايتد", "Liverpool": "ليفربول", "Arsenal": "آرسنال", "Chelsea": "تشيلسي", "Tottenham Hotspur": "توتنهام", "Newcastle United": "نيوكاسل", "Bayern Munich": "بايرن ميونخ", "Borussia Dortmund": "دورتموند", "Paris SG": "باريس سان جيرمان", "Juventus": "يوفنتوس", "AC Milan": "ميلان", "Inter Milan": "إنتر ميلان", "Al Ahly": "الأهلي المصري", "Zamalek": "الزمالك", "Real Sociedad": "ريال سوسيداد", "Sevilla": "إشبيلية", "Valencia": "فالنسيا", "Villarreal": "فياريال", "Athletic Bilbao": "أتلتيك بلباو", "Real Betis": "ريال بيتيس", "Girona": "جيرونا", "Aston Villa": "أستون فيلا", "West Ham United": "وست هام", "Everton": "إيفرتون", "Brighton and Hove Albion": "برايتون", "Leicester City": "ليستر سيتي", "Nottingham Forest": "نوتنغهام فورست", "Wolverhampton Wanderers": "وولفرهامبتون", "Crystal Palace": "كريستال بالاس", "Fulham": "فولهام", "Brentford": "برينتفورد", "Bournemouth": "بورنموث", "Bayer Leverkusen": "باير ليفركوزن", "RB Leipzig": "لايبزيغ", "Eintracht Frankfurt": "آينتراخت فرانكفورت", "VfB Stuttgart": "شتوتغارت", "Borussia Monchengladbach": "بوروسيا مونشنغلادباخ", "Schalke 04": "شالكه", "Napoli": "نابولي", "AS Roma": "روما", "Lazio": "لاتسيو", "Atalanta": "أتالانتا", "Fiorentina": "فيورنتينا", "Marseille": "مارسيليا", "Lyon": "ليون", "Monaco": "موناكو", "Lille": "ليل", "Nice": "نيس", "Benfica": "بنفيكا", "Porto": "بورتو", "Sporting CP": "سبورتينغ لشبونة", "Ajax": "أياكس", "PSV Eindhoven": "آيندهوفن", "Feyenoord": "فينورد", "Galatasaray": "غلطة سراي", "Fenerbahce": "فنربخشة", "Besiktas": "بشكتاش", "Trabzonspor": "طرابزون سبور", "Celtic": "سلتيك", "Rangers": "رينجرز", "Inter Miami": "إنتر ميامي", "LA Galaxy": "لوس أنجلوس جالاكسي", "Al Ain": "العين", "Shabab Al-Ahli": "شباب الأهلي", "Al Wahda": "الوحدة الإماراتي", "Al Jazira": "الجزيرة", "Sharjah": "الشارقة", "Al Wasl": "الوصل", "Al Sadd": "السد", "Al Duhail": "الدحيل", "Al Rayyan": "الريان", "Al Gharafa": "الغرافة", "Al Arabi": "العربي", "Al Kuwait": "الكويت", "Al Qadsia": "القادسية الكويتي", "Pyramids": "بيراميدز", "Wydad Casablanca": "الوداد", "Raja Casablanca": "الرجاء", "Esperance": "الترجي", "Al Faisaly": "الفيصلي الأردني", "Al Wehdat": "الوحدات", "Al Shorta": "الشرطة", "Al Zawraa": "الزوراء", "Persepolis": "برسبوليس", "Esteghlal": "استقلال", "Ulsan HD": "أولسان", "Urawa Red Diamonds": "أوراوا", "Japan": "اليابان", "South Korea": "كوريا الجنوبية", "Australia": "أستراليا", "Iran": "إيران", "Iraq": "العراق", "Qatar": "قطر", "United Arab Emirates": "الإمارات", "Kuwait": "الكويت", "Bahrain": "البحرين", "Oman": "عُمان", "Jordan": "الأردن", "Syria": "سوريا", "Lebanon": "لبنان", "Palestine": "فلسطين", "Yemen": "اليمن", "Egypt": "مصر", "Morocco": "المغرب", "Algeria": "الجزائر", "Tunisia": "تونس", "China": "الصين", "Uzbekistan": "أوزبكستان", "Indonesia": "إندونيسيا", "Al-Anwar": "الأنوار", "Al-Bukiryah": "البكيرية", "Al-Jel": "الجيل", "Al-Jeel": "الجيل", "Al-Najma Unaizah": "النجمة", "Al-Akhdoud": "الأخدود", "Al-Zulfi": "الزلفي", "Jeddah": "جدة", "Al-Ula": "العلا", "Al-Diriyah": "الدرعية", "Al-Safa": "الصفا", "Al-Jubail": "الجبيل", "Hajer": "هجر", "Al-Qaisumah": "القيصومة", "Al-Kawkab": "الكوكب", "Al-Sahel": "الساحل", "Al-Washm": "الوشم", "Al-Nahda": "النهضة", "Al-Taawon": "التعاون", "Damac FC": "ضمك", "Al-Riyadh SC": "الرياض", "Al-Khaleej Saihat": "الخليج", "Al-Fayha FC": "الفيحاء", "Al-Ittihad Jeddah": "الاتحاد", "Al-Ahli Jeddah": "الأهلي", "Al-Ahli Saudi": "الأهلي", "Al-Nassr Riyadh": "النصر", "Al-Shabab Riyadh": "الشباب", "Al-Ettifaq Dammam": "الاتفاق", "Al-Qadisiyah": "القادسية", "Ittihad FC": "الاتحاد", "Al-Ittihad Club (Jeddah)": "الاتحاد", "Al-Ittihad Club Saudi Arabia": "الاتحاد", "Al-Ittihad Football Club": "الاتحاد", "Al Ittihad FC": "الاتحاد", "Ohod Club": "أحد", "Ohod Saudi Football Club": "أحد", "Ohob Club": "أحد", "Ohud Medina": "أحد", "Al Ahli Jeddah": "الأهلي", "Al Ahli Saudi FC": "الأهلي", "Al Ahli FC": "الأهلي", "Al-Ahli Saudi FC": "الأهلي", "Al Ahli Saudi": "الأهلي", "Al Ahli Jeddah FC": "الأهلي", "Al Ahli Football Club": "الأهلي", "Al Ahli Sports Club": "الأهلي", "Al-Wehda FC": "الوحدة", "Al Wehda FC": "الوحدة", "Al-Khaleej FC": "الخليج", "Al-Khaleej Club of Saihat": "الخليج", "Khaleej FC": "الخليج", "Ettifaq Dammam": "الاتفاق", "Al-Ettifaq Club": "الاتفاق", "Ettifaq FC": "الاتفاق", "Al-Ettifaq FC": "الاتفاق", "Al Shabab": "الشباب", "Al Shabab Club": "الشباب", "Al Shabab FC": "الشباب", "Al-Shabab Football Club": "الشباب", "Al Tuhami Club": "التهامي", "Al-Safa Club": "الصفا", "Al Safa FC": "الصفا", "Al-Nahda Club (Saudi Arabia)": "النهضة", "Hajer FC": "هجر", "Hajer Club": "هجر", "Al-Feiha FC": "الفيحاء", "Al-Fayha Club": "الفيحاء", "Al-Ansar FC (Saudi Arabia)": "الأنصار", "Al-Ansar": "الأنصار", "Al Raed S.FC": "الرائد", "Al-Ra'ed": "الرائد", "Al-Raed FC": "الرائد", "Al Nassr Football Club": "النصر", "Al-Nassr F.C.": "النصر", "Al Nassr": "النصر", "Al-Nassr FC": "النصر", "Al Nassr FC": "النصر", "Al-Taawoun FC": "التعاون", "Al-Taawon FC": "التعاون", "Al Taawoun FC": "التعاون", "Al-Hedaya Club": "الهداية", "Al-Majd Club": "المجد", "Al-Hilal Saudi Club": "الهلال", "Al Hilal": "الهلال", "Al Hilal SC": "الهلال", "Al Hilal SFC": "الهلال", "Al-Hilal SFC": "الهلال", "Al Hilal Saudi Club": "الهلال", "Al-Hilal SC": "الهلال", "Al-Hazem FC": "الحزم", "Al Hazem SC": "الحزم", "Al Fateh SC": "الفتح", "Al-Arabi SC (Saudi Arabia)": "العربي", "Al-Jabalain Club": "الجبلين", "Al Jabalain": "الجبلين", "Al-Watani": "الوطني", "Al-Watani Club": "الوطني", "Al-Najma SC (Saudi Arabia)": "النجمة", "Bisha FC": "بيشة", "Al-Tai FC": "الطائي", "Al-Bukiryah FC": "البكيرية", "Al-Sharq Club": "الشرق", "Sharq COD": "الشرق", "Munief SC": "منيف", "Al-Shoalah": "الشعلة", "Al-Shoulla FC": "الشعلة", "Al-Salam Saudi Club": "السلام", "Al-Omran Club": "العمران", "Category:Al-Omran Club players": "العمران", "Baish Club": "بيش", "Tuwaiq Club": "طويق", "Al-Badaya Club": "البدائع", "Neom SC": "نيوم", "Neom Sports Club": "نيوم", "Al-Suqoor Club": "نيوم", "Al Jubail Club": "الجبيل", "Al-Jubail Club": "الجبيل", "Abha Club": "أبها", "Radwa Club": "رضوى", "Al-Jazira Club": "الجزيرة", "Al-Washm Club": "الوشم", "AlQadsiah": "القادسية", "Al-Qadsiah FC": "القادسية", "Qadsiah FC": "القادسية", "Al-Qadsiah Saudi Club of Kings": "القادسية", "Al-Qadsiah SC": "القادسية", "Qadsiah SC": "القادسية", "Al Qadsiah FC": "القادسية", "Al-Qadsiah Saudi Club": "القادسية", "AlQadsiah SC": "القادسية", "Jeddah Club": "جدة", "Al-Ibtisam Club": "الابتسام", "Heraa FC": "حراء", "Okaz Club": "عكاظ", "Al-Alameen Club": "العلمين", "Al-Kawkab FC": "الكوكب", "Al Kawkab Football Club": "الكوكب", "Al Kawkab FC": "الكوكب", "Al-Zulfi FC": "الزلفي", "Al-Qaisumah FC": "القيصومة", "Al-Kholood Club": "الخلود", "Al-Yarmuk Club (Saudi Arabia)": "اليرموك", "Mudhar Club": "مضر", "Al-Noor FC": "النور", "Al-Ard Club": "العرض", "Al-Hamadah Club": "الحمادة", "Al-Taqadom FC": "التقدم", "Damac Club": "ضمك", "Al-Anwar Club": "الأنوار", "Al-Thoqbah Club": "الثقبة", "Al-Amjad F.C.": "الأمجاد", "Al-Qala Club": "القلعة", "Al-Jewaa Club": "الجواء", "Sajir Club": "ساجر", "Sajer FC": "ساجر", "Al-Houra FC": "الحوراء", "Al-Houra Club": "الحوراء", "Al-Zayton Club": "الزيتون", "Al-Orobah F.C.": "العروبة", "Al-Orobah FC": "العروبة", "Al-Mujazzal Club": "المجزل", "Al-Qurayat Club": "القريات", "Al-Lewaa Club": "اللواء", "Wej Sports Club": "وج", "Weg SC": "وج", "Wej SC": "وج", "Al-Hait Club": "الحائط", "Al Hait Club": "الحائط", "Al Dera'a FC": "الدرع", "Al-Dera'a FC": "الدرع", "Sudair Club": "سدير", "Al-Diriyah Club": "الدرعية", "Diriyah Club": "الدرعية", "Al-Hada Club": "الهدى", "Al-Jeel Club": "الجيل", "Al-Rawdhah Club": "الروضة", "Al-Rawdah Club": "الروضة", "Al-Nojoom FC": "النجوم", "Al-Waad FC": "الوعد", "Arar FC": "عرعر", "Arar F.C.": "عرعر", "Al-Areen Club": "العرين", "Hetten FC": "حطين", "Al Okhdood": "الأخدود", "Al-Okhdood Club": "الأخدود", "Al Okhdood Club": "الأخدود", "Sharurah Club": "شرورة", "Al Bahah Club": "الباحة", "Al-Jandal SC": "الجندل", "Al Jandal Club": "الجندل", "Afif FC": "عفيف", "Al-Tasamoh FC": "القنفذة", "Al-Tasamoh FC (Saudi)": "القنفذة", "Al-Khaldi Club": "الخالدي", "Al-Mehmal Club": "المحمل", "Al-Qarah FC (Saudi)": "القارة", "Al-Qarah FC": "القارة", "Al-Muzahimiyyah Club": "المزاحمية", "Al-Muzahmiyya Club": "المزاحمية", "Al-Tadamon Club": "التضامن", "Najd FC": "نجد", "Al-Sarawat FC": "السروات", "Al-Qotah Club (Saudi)": "الغوطة", "Al-Gottah FC": "الغوطة", "Al-Sir Club": "السر", "Qaryat Al-Ulya Club": "قرية العليا", "Artawi Al-Raqas Club": "الأرطاوي", "Al-Muheet SC": "المحيط", "Al-Waseel Club": "الوصيل", "Al-Tobad Club": "التوباد", "Al-Wadi Al-Akhdar Club": "الوادي", "Al Oyoon FC": "العيون", "Al-Ain FC (Saudi Arabia)": "العين", "Al-Ain FC": "العين", "Kumait FC": "كميت", "Al Entsar FC": "الانتصار", "Al-Entesar Club": "الانتصار", "Jubbah Club": "جبة", "Jubbah FC": "جبة", "Al-Aghar Club": "الأغر", "Mossdah FC": "مصدة", "Al-Khuwaildiyah FC": "الخويلدية", "Al-Ghazwa Club": "الغزوة", "Al Ghazwah FC": "الغزوة", "Al-Sadd FC": "السد", "Al-Sadd FC (Saudi Arabia)": "السد", "Thahlan Club": "ثهلان", "Al Batin FC": "الباطن", "Al-Sahel FC": "الساحل", "Al-Sahel SC (Saudi Arabia)": "الساحل", "Ras Tanura SC": "رأس تنورة", "Al-Asyah FC": "الأسياح", "Jerash FC": "جرش", "Jarash Club": "جرش", "Al-Shaheed FC": "الشهيد", "Al Selmiyah Club": "السلمية", "Al-Rayyan Club": "الريان", "Al-Rayyan Club (Saudi Arabia)": "الريان", "Al-Hejaz Club": "الحجاز", "Al Hejaz Club": "الحجاز", "Al-Taraf Club": "الطرف", "Najran S.FC": "نجران", "Najran Sport Club": "نجران", "Najran SC": "نجران", "Al-Sawari Club": "الصواري", "Al-Helaliah FC": "الهلالية", "Feid SC": "فيد", "Al-Ula FC": "العلا", "Al-Ula Club": "العلا", "Al-Bateen SC": "البطين", "Al-Taraji Club": "الترجي", "Al-Shurooq Club": "الشروق", "Al-Fursan Club": "الفرسان", "Al-Sahari Club": "الصحاري", "Sdoos Club": "سدوس", "Ushaiger Club": "أشيقر", "Al-Khabra Club": "الخبراء", "Duba Club": "ضباء", "Al-Maseef SC": "المصيف", "Al-Qous FC": "القوس", "Al-Qaws Club": "القوس", "Al-Nairyah Club": "النعيرية", "Al-Adalh FC": "العدالة", "Al Adalah Club": "العدالة", "Al-Saqer FC": "الصقر", "Al-Saqr Club": "الصقر", "Qafar Club": "قفار", "Tayma Club": "تيماء", "Al-Entelaq FC": "الانطلاق", "Al-Lith Club": "الليث", "Al-Farouk Club": "الفاروق", "Al-Dahab Club": "الذهب", "Almaa Club": "ألمع", "Tabarjal SC": "طبرجل", "Al-Qwarah Club": "القوارة", "Al-Watan FC": "الوطن", "Sameera FC": "سميراء", "Al-Fao Club": "الفاو", "Qilwah Club": "قلوة", "Haql Club": "حقل", "Khaybar SC": "خيبر", "Hubuna SC": "حبونا", "Al-Bajadiyah FC": "البجادية", "Al-Ashaa Club": "بقيق", "Al-Aqeeq FC": "النخل", "Dhamk": "ضمك", "Al-Arabi Al-Saudi": "العربي", "Mallorca": "مايوركا", "Cremonese": "كريمونيزي", "Genoa": "جنوى", "Lecce": "ليتشي", "Sassuolo": "ساسولو", "Freiburg": "فرايبورغ", "Hoffenheim": "هوفنهايم", "Stuttgart": "شتوتغارت", "Angers": "أنجيه", "Auxerre": "أوكسير", "Brest": "بريست", "Le Havre": "لوهافر", "Lens": "لانس", "Nantes": "نانت", "Rennes": "رين", "Strasbourg": "ستراسبورغ", "AVS": "آفس", "Estoril Praia": "إستوريل", "Tondela": "تونديلا", "Excelsior": "إكسلسيور", "Groningen": "خرونينغن", "Heerenveen": "هيرنفين", "Willem II": "فيليم الثاني", "Amed": "آمد", "Gaziantep": "غازي عنتاب", "Göztepe": "غوزتبه", "Konyaspor": "قونيا سبور", "Rizespor": "ريزه سبور", "Çorum": "تشوروم", "Al-Mokawloon al-Arab": "المقاولون العرب", "National Bank of Egypt": "البنك الأهلي المصري", "Petrojet": "بتروجت", "Smouha": "سموحة", "Tala'ea El Gaish": "طلائع الجيش", "Ajman": "عجمان", "Al Bataeh": "البطائح", "Al Nasr": "النصر الإماراتي", "Dibba Al-Fujairah": "دبا الفجيرة", "Hatta": "حتا", "Khorfakkan": "خورفكان", "Al-Ahli Doha": "الأهلي القطري", "Al-Shahaniya": "الشحانية", "Boston Celtics": "بوسطن سيلتكس", "New York Knicks": "نيويورك نيكس", "San Antonio Spurs": "سان أنطونيو سبيرز", "Baltimore Ravens": "بالتيمور ريفنز"};   // assets/shared/teams-ar.json
 // match "Al-Adalah", "Al Adalah", "Al-Adalah FC" and "AL ADALAH" to the same entry, and "Atlético" to "Atletico"
 // (the same key as team_key() in .github/tools/team_ids.py and Arabic.key(); tests/team_ids_test.py compares them)
 const teamKey = s => String(s).replace(/ı/g,'i').replace(/ß/g,'ss').normalize('NFKD').replace(/[\u0300-\u036f]+/g,'')
   .toLowerCase().replace(/\b(fc|sc|cf|afc|club|saudi club)\b/g,'')
   .replace(/[^a-z0-9]+/g,' ').trim().replace(/^al /,'al');
-const TEAM_BY_ID = {"137855": "أبها", "137721": "الأهلي", "152917": "الدرعية", "136017": "الاتفاق", "136021": "الفيصلي", "136011": "الفتح", "136014": "الفيحاء", "136200": "الحزم", "136013": "الهلال", "136018": "الاتحاد", "139080": "الخليج", "149112": "الخلود", "150638": "النجمة", "136022": "النصر", "147444": "الأخدود", "136015": "القادسية", "147445": "الرياض", "136020": "الشباب", "136012": "التعاون", "137852": "ضمك", "150637": "نيوم", "137854": "العدالة", "152918": "الأنوار", "150639": "العربي", "136019": "الباطن", "150640": "البكيرية", "150091": "الجبلين", "150644": "الجندل", "156331": "الجيل", "150645": "الجبيل", "149111": "العروبة", "136016": "الرائد", "156329": "الصقر", "143173": "الطائي", "152473": "العلا", "136199": "الوحدة", "150643": "الزلفي", "156330": "هجر", "150641": "جدة", "133604": "آرسنال", "133601": "أستون فيلا", "134301": "بورنموث", "134355": "برينتفورد", "133619": "برايتون", "133623": "بيرنلي", "133610": "تشيلسي", "133625": "كوفنتري سيتي", "133632": "كريستال بالاس", "133615": "إيفرتون", "133600": "فولهام", "133617": "هال سيتي", "133622": "إيبسويتش تاون", "133635": "ليدز يونايتد", "133602": "ليفربول", "133613": "مانشستر سيتي", "133612": "مانشستر يونايتد", "134777": "نيوكاسل", "133720": "نوتنغهام فورست", "133603": "سندرلاند", "133616": "توتنهام", "133636": "وست هام", "133599": "وولفرهامبتون", "133727": "أتلتيك بلباو", "133729": "أتلتيكو مدريد", "133739": "برشلونة", "133937": "سيلتا فيغو", "134221": "ديبورتيفو ألافيس", "133816": "ديبورتيفو لاكورونيا", "134384": "إلتشي", "133734": "إسبانيول", "133731": "خيتافي", "134700": "جيرونا", "133732": "ليفانتي اف سي", "133733": "مايوركا", "133736": "ملقا", "133730": "أوساسونا", "133726": "راسينغ سانتاندير", "133728": "رايو فايكانو", "133722": "ريال بيتيس", "133738": "ريال مدريد", "135455": "ريال أوفييدو", "133724": "ريال سوسيداد", "133735": "إشبيلية", "133725": "فالنسيا", "133740": "فياريال", "133667": "ميلان", "134782": "أتالانتا", "134781": "بولونيا", "134783": "كلياري", "134243": "كومو", "134224": "كريمونيزي", "133674": "فيورنتينا", "133818": "فروزينوني", "133675": "جنوى", "134784": "إيلاس فيرونا", "133681": "إنتر ميلان", "133676": "يوفنتوس", "133668": "لاتسيو", "133678": "ليتشي", "134270": "مونزا", "133670": "نابولي", "135728": "بارما", "133859": "بيزا", "133682": "روما", "133701": "ساسولو", "133687": "تورينو", "133679": "أودينيزي", "134234": "فينيتسيا", "133666": "باير ليفركوزن", "133664": "بايرن ميونخ", "133650": "دورتموند", "134779": "بوروسيا مونشنغلادباخ", "133814": "آينتراخت فرانكفورت", "138411": "إلفرسبيرغ", "133652": "آوغسبورغ", "134696": "هايدنهايم", "133654": "كولن", "133653": "فرايبورغ", "133651": "هامبورغ", "133657": "هوفنهايم", "133665": "ماينتس", "134551": "بادربورن", "134695": "لايبزيغ", "133661": "شالكه", "133813": "سانت باولي", "133660": "شتوتغارت", "134690": "يونيون برلين", "133662": "فيردر بريمن", "133655": "فولفسبورغ", "134709": "أنجيه", "134788": "أوكسير", "133704": "بريست", "133862": "لوهافر", "133848": "لومان", "133822": "لانس", "133711": "ليل", "133715": "لوريان", "133713": "ليون", "133707": "مارسيليا", "133883": "متز", "133823": "موناكو", "133861": "نانت", "133712": "نيس", "135465": "باريس إف سي", "133714": "باريس سان جيرمان", "133719": "رين", "133882": "ستراسبورغ", "133703": "تولوز", "134789": "تروا", "147479": "آفس", "138856": "أكادميكو دي بازو", "143704": "ألفيركا", "134387": "أروكا دا سيلفا", "134108": "بنفيكا", "134098": "سبورتينغ براغا", "138864": "كاسا بيا", "134106": "إستوريل", "140008": "إستريلا دا أمادورا", "134114": "بورتو", "136854": "فاماليكاو", "134113": "جل فيسنتي", "134023": "ماريتيمو", "134112": "موريرينسي", "134109": "ناسيونال ماديرا", "134107": "ريو أفي", "136192": "سانتا كلارا", "135708": "سبورتينغ لشبونة", "135502": "تونديلا", "134115": "فيتوريا غيماريش", "133769": "أدو دين هاغ", "133767": "إي زد ألكمار", "133772": "أياكس", "134303": "كامبور", "133757": "إكسلسيور", "133867": "فولندام", "133758": "فينورد", "134264": "فورتونا سيتارد", "134304": "غو أهد إيغلز", "133762": "خرونينغن", "133759": "هيرنفين", "133766": "هيراكليس ألميلو", "133773": "ناك بريدا", "133760": "إن إي سي نيميخن", "133936": "بي إي سي زفوله", "133768": "آيندهوفن", "133866": "سبارتا روتردام", "138004": "تلستار", "133774": "تفينتي أنشخيدة", "133764": "أوترخت", "133827": "فيليم الثاني", "135676": "ألانيا سبور", "138959": "آمد", "133799": "أنطاليا سبور", "133794": "بشكتاش", "134272": "أرضروم سبور", "138977": "أيوب سبور", "138983": "فاتح قرهجمرك", "133807": "فنربخشة", "133804": "غلطة سراي", "138092": "غازي عنتاب", "133798": "غنتشلربيرليغي", "135891": "غوزتبه", "133834": "قاسم باشا", "133802": "قيصرية سبور", "133870": "كوجالي سبور", "133835": "قونيا سبور", "133885": "ريزه سبور", "133797": "سامسون سبور", "133796": "طرابزون سبور", "138951": "تشوروم", "134589": "إسطنبول بشاق شهر", "156496": "أبو قير للأسمدة", "138995": "الأهلي المصري", "139839": "الاتحاد السكندري", "139844": "المصري", "139837": "المقاولون العرب", "156495": "بترول أسيوط", "140795": "سيراميكا كيلوباترا", "139841": "إنبي", "139845": "الجونة", "156494": "القناة", "140794": "غزل المحلة", "139846": "حرس الحدود", "139843": "الإسماعيلي", "153475": "كهرباء الإسماعيلية", "144160": "مودرن سبورت", "140796": "البنك الأهلي المصري", "149410": "بتروجت", "144159": "فاركو", "139838": "بيراميدز", "139840": "سموحة", "139848": "طلائع الجيش", "139850": "وادي دجلة", "139852": "زد", "138997": "الزمالك", "137838": "عجمان", "137832": "العين", "146537": "البطائح", "137834": "الظفرة", "137830": "الجزيرة", "137831": "النصر الإماراتي", "137836": "الوحدة الإماراتي", "137835": "الوصل", "137839": "بني ياس", "146536": "دبا الفجيرة", "137841": "حتا", "137837": "كلباء", "137842": "خورفكان", "137828": "شباب الأهلي", "137829": "الشارقة", "156157": "يونايتد", "138049": "الأهلي القطري", "135946": "العربي القطري", "137679": "الدحيل", "138029": "الغرافة", "138050": "الريان", "137648": "السد", "138035": "السيلية", "138030": "الشحانية", "141174": "الشمال", "137994": "الوكرة", "155255": "لوسيل", "137995": "نادي قطر", "138052": "أم صلال", "135851": "أتلانتا يونايتد", "140079": "أوستن", "134150": "كلوب دو فوت مونتريال", "140078": "تشارلوت", "134154": "شيكاغو فاير", "134794": "كولورادو رابيدز", "134152": "كولومبوس كرو", "134145": "دي.سي. يونايتد", "136688": "سينسيناتي", "134146": "دالاس", "134144": "هيوستن دينامو", "137699": "إنتر ميامي", "134153": "لوس أنجلوس جالاكسي", "136050": "لوس أنجلوس", "135852": "منيسوتا يونايتد", "137700": "ناشفيل أس سي", "134159": "نيو إنجلاند ريفولوشن", "134630": "نيويورك سيتي", "134156": "نيويورك ريد بولز", "135292": "أورلاندو سيتي", "134142": "فيلادلفيا يونيون", "134155": "بورتلاند تيمبرز", "134158": "ريال سالت ليك", "150261": "سان دييغو", "134157": "سان خوسيه إيرثكويكس", "134149": "سياتل ساوندرز", "134143": "سبورتينغ كانساس سيتي", "147062": "سانت لويس أس سي", "134148": "تورنتو", "134147": "فانكوفر وايتكابس", "134516": "الجزائر", "134509": "الأرجنتين", "134500": "أستراليا", "140149": "البحرين", "134515": "بلجيكا", "134496": "البرازيل", "134498": "الكاميرون", "134579": "الصين", "134501": "كولومبيا", "133912": "كرواتيا", "136138": "مصر", "133914": "إنجلترا", "133913": "فرنسا", "133907": "ألمانيا", "134511": "إيران", "140148": "العراق", "133910": "إيطاليا", "134503": "اليابان", "140145": "الأردن", "140144": "الكويت", "140166": "لبنان", "136489": "ليبيا", "134497": "المكسيك", "136139": "المغرب", "133905": "هولندا", "134512": "نيجيريا", "140155": "عمان", "140154": "فلسطين", "133908": "البرتغال", "136472": "قطر", "136137": "السعودية", "136143": "السنغال", "134517": "كوريا الجنوبية", "133909": "إسبانيا", "136495": "السودان", "140032": "سوريا", "136142": "تونس", "135985": "تركيا", "134514": "الولايات المتحدة", "140163": "الإمارات", "134504": "الأوروغواي", "140151": "أوزبكستان", "140153": "اليمن"};   // assets/shared/teams.json: TheSportsDB id -> Arabic
+const TEAM_BY_ID = {"137855": "أبها", "137721": "الأهلي", "152917": "الدرعية", "136017": "الاتفاق", "136021": "الفيصلي", "136011": "الفتح", "136014": "الفيحاء", "136200": "الحزم", "136013": "الهلال", "136018": "الاتحاد", "139080": "الخليج", "149112": "الخلود", "150638": "النجمة", "136022": "النصر", "147444": "الأخدود", "136015": "القادسية", "147445": "الرياض", "136020": "الشباب", "136012": "التعاون", "137852": "ضمك", "150637": "نيوم", "137854": "العدالة", "152918": "الأنوار", "150639": "العربي", "136019": "الباطن", "150640": "البكيرية", "150091": "الجبلين", "150644": "الجندل", "156331": "الجيل", "150645": "الجبيل", "149111": "العروبة", "136016": "الرائد", "156329": "الصقر", "143173": "الطائي", "152473": "العلا", "136199": "الوحدة", "150643": "الزلفي", "156330": "هجر", "150641": "جدة", "133604": "آرسنال", "133601": "أستون فيلا", "134301": "بورنموث", "134355": "برينتفورد", "133619": "برايتون", "133623": "بيرنلي", "133610": "تشيلسي", "133625": "كوفنتري سيتي", "133632": "كريستال بالاس", "133615": "إيفرتون", "133600": "فولهام", "133617": "هال سيتي", "133622": "إيبسويتش تاون", "133635": "ليدز يونايتد", "133602": "ليفربول", "133613": "مانشستر سيتي", "133612": "مانشستر يونايتد", "134777": "نيوكاسل", "133720": "نوتنغهام فورست", "133603": "سندرلاند", "133616": "توتنهام", "133636": "وست هام", "133599": "وولفرهامبتون", "133727": "أتلتيك بلباو", "133729": "أتلتيكو مدريد", "133739": "برشلونة", "133937": "سيلتا فيغو", "134221": "ديبورتيفو ألافيس", "133816": "ديبورتيفو لاكورونيا", "134384": "إلتشي", "133734": "إسبانيول", "133731": "خيتافي", "134700": "جيرونا", "133732": "ليفانتي اف سي", "133733": "مايوركا", "133736": "ملقا", "133730": "أوساسونا", "133726": "راسينغ سانتاندير", "133728": "رايو فايكانو", "133722": "ريال بيتيس", "133738": "ريال مدريد", "135455": "ريال أوفييدو", "133724": "ريال سوسيداد", "133735": "إشبيلية", "133725": "فالنسيا", "133740": "فياريال", "133667": "ميلان", "134782": "أتالانتا", "134781": "بولونيا", "134783": "كلياري", "134243": "كومو", "134224": "كريمونيزي", "133674": "فيورنتينا", "133818": "فروزينوني", "133675": "جنوى", "134784": "إيلاس فيرونا", "133681": "إنتر ميلان", "133676": "يوفنتوس", "133668": "لاتسيو", "133678": "ليتشي", "134270": "مونزا", "133670": "نابولي", "135728": "بارما", "133859": "بيزا", "133682": "روما", "133701": "ساسولو", "133687": "تورينو", "133679": "أودينيزي", "134234": "فينيتسيا", "133666": "باير ليفركوزن", "133664": "بايرن ميونخ", "133650": "دورتموند", "134779": "بوروسيا مونشنغلادباخ", "133814": "آينتراخت فرانكفورت", "138411": "إلفرسبيرغ", "133652": "آوغسبورغ", "134696": "هايدنهايم", "133654": "كولن", "133653": "فرايبورغ", "133651": "هامبورغ", "133657": "هوفنهايم", "133665": "ماينتس", "134551": "بادربورن", "134695": "لايبزيغ", "133661": "شالكه", "133813": "سانت باولي", "133660": "شتوتغارت", "134690": "يونيون برلين", "133662": "فيردر بريمن", "133655": "فولفسبورغ", "134709": "أنجيه", "134788": "أوكسير", "133704": "بريست", "133862": "لوهافر", "133848": "لومان", "133822": "لانس", "133711": "ليل", "133715": "لوريان", "133713": "ليون", "133707": "مارسيليا", "133883": "متز", "133823": "موناكو", "133861": "نانت", "133712": "نيس", "135465": "باريس إف سي", "133714": "باريس سان جيرمان", "133719": "رين", "133882": "ستراسبورغ", "133703": "تولوز", "134789": "تروا", "147479": "آفس", "138856": "أكادميكو دي بازو", "143704": "ألفيركا", "134387": "أروكا دا سيلفا", "134108": "بنفيكا", "134098": "سبورتينغ براغا", "138864": "كاسا بيا", "134106": "إستوريل", "140008": "إستريلا دا أمادورا", "134114": "بورتو", "136854": "فاماليكاو", "134113": "جل فيسنتي", "134023": "ماريتيمو", "134112": "موريرينسي", "134109": "ناسيونال ماديرا", "134107": "ريو أفي", "136192": "سانتا كلارا", "135708": "سبورتينغ لشبونة", "135502": "تونديلا", "134115": "فيتوريا غيماريش", "133769": "أدو دين هاغ", "133767": "إي زد ألكمار", "133772": "أياكس", "134303": "كامبور", "133757": "إكسلسيور", "133867": "فولندام", "133758": "فينورد", "134264": "فورتونا سيتارد", "134304": "غو أهد إيغلز", "133762": "خرونينغن", "133759": "هيرنفين", "133766": "هيراكليس ألميلو", "133773": "ناك بريدا", "133760": "إن إي سي نيميخن", "133936": "بي إي سي زفوله", "133768": "آيندهوفن", "133866": "سبارتا روتردام", "138004": "تلستار", "133774": "تفينتي أنشخيدة", "133764": "أوترخت", "133827": "فيليم الثاني", "135676": "ألانيا سبور", "138959": "آمد", "133799": "أنطاليا سبور", "133794": "بشكتاش", "134272": "أرضروم سبور", "138977": "أيوب سبور", "138983": "فاتح قرهجمرك", "133807": "فنربخشة", "133804": "غلطة سراي", "138092": "غازي عنتاب", "133798": "غنتشلربيرليغي", "135891": "غوزتبه", "133834": "قاسم باشا", "133802": "قيصرية سبور", "133870": "كوجالي سبور", "133835": "قونيا سبور", "133885": "ريزه سبور", "133797": "سامسون سبور", "133796": "طرابزون سبور", "138951": "تشوروم", "134589": "إسطنبول بشاق شهر", "156496": "أبو قير للأسمدة", "138995": "الأهلي المصري", "139839": "الاتحاد السكندري", "139844": "المصري", "139837": "المقاولون العرب", "156495": "بترول أسيوط", "140795": "سيراميكا كيلوباترا", "139841": "إنبي", "139845": "الجونة", "156494": "القناة", "140794": "غزل المحلة", "139846": "حرس الحدود", "139843": "الإسماعيلي", "153475": "كهرباء الإسماعيلية", "144160": "مودرن سبورت", "140796": "البنك الأهلي المصري", "149410": "بتروجت", "144159": "فاركو", "139838": "بيراميدز", "139840": "سموحة", "139848": "طلائع الجيش", "139850": "وادي دجلة", "139852": "زد", "138997": "الزمالك", "137838": "عجمان", "137832": "العين", "146537": "البطائح", "137834": "الظفرة", "137830": "الجزيرة", "137831": "النصر الإماراتي", "137836": "الوحدة الإماراتي", "137835": "الوصل", "137839": "بني ياس", "146536": "دبا الفجيرة", "137841": "حتا", "137837": "كلباء", "137842": "خورفكان", "137828": "شباب الأهلي", "137829": "الشارقة", "156157": "يونايتد", "138049": "الأهلي القطري", "135946": "العربي القطري", "137679": "الدحيل", "138029": "الغرافة", "138050": "الريان", "137648": "السد", "138035": "السيلية", "138030": "الشحانية", "141174": "الشمال", "137994": "الوكرة", "155255": "لوسيل", "137995": "نادي قطر", "138052": "أم صلال", "135851": "أتلانتا يونايتد", "140079": "أوستن", "134150": "كلوب دو فوت مونتريال", "140078": "تشارلوت", "134154": "شيكاغو فاير", "134794": "كولورادو رابيدز", "134152": "كولومبوس كرو", "134145": "دي.سي. يونايتد", "136688": "سينسيناتي", "134146": "دالاس", "134144": "هيوستن دينامو", "137699": "إنتر ميامي", "134153": "لوس أنجلوس جالاكسي", "136050": "لوس أنجلوس", "135852": "منيسوتا يونايتد", "137700": "ناشفيل أس سي", "134159": "نيو إنجلاند ريفولوشن", "134630": "نيويورك سيتي", "134156": "نيويورك ريد بولز", "135292": "أورلاندو سيتي", "134142": "فيلادلفيا يونيون", "134155": "بورتلاند تيمبرز", "134158": "ريال سالت ليك", "150261": "سان دييغو", "134157": "سان خوسيه إيرثكويكس", "134149": "سياتل ساوندرز", "134143": "سبورتينغ كانساس سيتي", "147062": "سانت لويس أس سي", "134148": "تورنتو", "134147": "فانكوفر وايتكابس", "134516": "الجزائر", "134509": "الأرجنتين", "134500": "أستراليا", "140149": "البحرين", "134515": "بلجيكا", "134496": "البرازيل", "134498": "الكاميرون", "134579": "الصين", "134501": "كولومبيا", "133912": "كرواتيا", "136138": "مصر", "133914": "إنجلترا", "133913": "فرنسا", "133907": "ألمانيا", "134511": "إيران", "140148": "العراق", "133910": "إيطاليا", "134503": "اليابان", "140145": "الأردن", "140144": "الكويت", "140166": "لبنان", "136489": "ليبيا", "134497": "المكسيك", "136139": "المغرب", "133905": "هولندا", "134512": "نيجيريا", "140155": "عمان", "140154": "فلسطين", "133908": "البرتغال", "136472": "قطر", "136137": "السعودية", "136143": "السنغال", "134517": "كوريا الجنوبية", "133909": "إسبانيا", "136495": "السودان", "140032": "سوريا", "136142": "تونس", "135985": "تركيا", "134514": "الولايات المتحدة", "140163": "الإمارات", "134504": "الأوروغواي", "140151": "أوزبكستان", "140153": "اليمن", "134860": "بوسطن سيلتكس", "134862": "نيويورك نيكس", "134879": "سان أنطونيو سبيرز", "134922": "بالتيمور ريفنز"};   // assets/shared/teams.json: TheSportsDB id -> Arabic
 const TEAM_KEYS = {};
 // first entry wins on a clash: the Saudi "Al-Faisaly" before the Jordanian "Al Faisaly"
 for(const [en, arName] of Object.entries(TEAM_AR)) if(!(teamKey(en) in TEAM_KEYS)) TEAM_KEYS[teamKey(en)] = arName;
@@ -627,6 +678,17 @@ let MATCHES_LOADED = false;   // a refresh answered; until then the saved row st
 let MATCHES = {};   // team id -> next event
 let RESULTS = {};   // team id -> recent events
 let NEXT_LIST = {};   // team id -> upcoming events
+let LEAGUE_SCHEDULES = {};  // successful full schedule loads (even when a season has no completed games yet)
+// League-specific ESPN schedules include away fixtures; TheSportsDB's free team schedule is home-only.
+const TEAM_SCHEDULES = {
+  '136018':{path:'soccer/ksa.1',team:'2276'},
+  '133604':{path:'soccer/eng.1',team:'359'},
+  '133738':{path:'soccer/esp.1',team:'86'},
+  '134879':{path:'basketball/nba',team:'24',season:'nba'},
+  '134862':{path:'basketball/nba',team:'18',season:'nba'},
+  '134860':{path:'basketball/nba',team:'2',season:'nba'},
+  '134922':{path:'football/nfl',team:'33',season:'nfl'},
+};
 
 // ---------- team names in Arabic ----------
 // 1) built-in table, 2) the Arabic label on Wikidata (cached on the device), 3) transliteration meanwhile
@@ -691,7 +753,7 @@ function arName(en, kind, id){
     if(k) return k;
   }
   const key = kind + ':' + en;
-  if(AR_NAMES[key] !== undefined) return AR_NAMES[key] || translit(en);
+  if(AR_NAMES[key] !== undefined) return AR_NAMES[key] || (kind === 'team' ? en : translit(en));
   if(!AR_PENDING.has(key)){
     AR_PENDING.add(key);
     arQueue = arQueue.then(async ()=>{            // one lookup at a time
@@ -703,25 +765,34 @@ function arName(en, kind, id){
       AR_PENDING.delete(key);
     });
   }
-  return translit(en);
+  return kind === 'team' ? en : translit(en);
 }
 const teamAr = (s, id) => arName(s, 'team', id);
 
 async function fetchNext(id){
-  const r = await fetch(`https://www.thesportsdb.com/api/v1/json/${CONFIG.sportsKey}/eventsnext.php?id=${id}`,{cache:'no-store'});
+  const r = await fetchT(`https://www.thesportsdb.com/api/v1/json/${CONFIG.sportsKey}/eventsnext.php?id=${id}`,12000);
   if(!r.ok) throw 0;
   const j = await r.json();
   if(j?.events) NEXT_LIST[id] = j.events;
-  return (j?.events || [])[0] || null;
+  const now = Date.now(), list = j?.events || [];
+  return list.filter(ev => toDate(ev).getTime() > now).sort((a,b)=>toDate(a)-toDate(b))[0] || null;
 }
 function toDate(ev){
-  const s = ev.strTimestamp || `${ev.dateEvent}T${ev.strTime || '00:00:00'}`;
-  return new Date(s.endsWith('Z') ? s : s+'Z');
+  const s = String(ev.strTimestamp || `${ev.dateEvent}T${ev.strTime || '00:00:00'}`).trim();
+  if(/[zZ]$|[+-]\d\d:\d\d$/.test(s)) return new Date(s);
+  // TheSportsDB timestamps are UTC, but some basketball/football records use an unzoned US date string.
+  const us = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})\s+(\d{1,2}):(\d{2}):(\d{2})\s*(AM|PM)$/i);
+  if(us){
+    const hour = (+us[4] % 12) + (us[7].toUpperCase() === 'PM' ? 12 : 0);
+    return new Date(Date.UTC(+us[3], +us[1]-1, +us[2], hour, +us[5], +us[6]));
+  }
+  // ISO timestamps without an offset are also UTC; local display is applied later with CONFIG.timezone.
+  return new Date(/[T ]/.test(s) ? s+'Z' : `${s}T00:00:00Z`);
 }
 
 // one slot per picked team: a result from the last 24h, else a fixture this week, else hidden
 // A game is over once its status says so, or 2.5 h after kick-off; its score stays up for a day after that.
-const FINAL = ['FT','AET','PEN','MATCH FINISHED'];
+const FINAL = ['FT','AET','AOT','PEN','MATCH FINISHED'];
 function finishedRecently(ev, now){
   if(!ev || ev.intHomeScore == null || ev.intAwayScore == null) return false;
   const k = toDate(ev).getTime(), end = k + 2.5*3600000;
@@ -738,7 +809,8 @@ function keepResult(id, ev){
 }
 function resultsFor(id){
   const seen = new Set();
-  return [...(RESULTS[id] || []), ...(KEPT[id] || []), MATCHES[id]]
+  const local = LEAGUE_SCHEDULES[id] ? [] : (KEPT[id] || []);
+  return [...(RESULTS[id] || []), ...local, MATCHES[id]]
     .filter(ev => ev && ev.idEvent && !seen.has(ev.idEvent) && seen.add(ev.idEvent));
 }
 
@@ -772,8 +844,10 @@ function matchSlot(id, now, shown){
 
 function liveStatus(ev, t12){
   const st = (ev.strStatus || '').toUpperCase();
-  if(st === 'HT') return 'استراحة';
-  if(['FT','AET','PEN'].includes(st)) return 'انتهت';
+  if(['HT','BT'].includes(st)) return 'استراحة';
+  if(['FT','AET','AOT','PEN'].includes(st)) return 'انتهت';
+  if(/^Q[1-4]$/.test(st)) return `الربع ${ar(+st[1])}`;
+  if(st === 'OT') return 'وقت إضافي';
   const m = parseInt(ev.strProgress, 10);
   return isNaN(m) ? `بدأت ${t12}` : `الدقيقة ${ar(m)}`;
 }
@@ -815,20 +889,108 @@ async function fetchLast(id){
   const j = await r.json();
   return j.results || [];
 }
+function scheduleSeason(feed, now){
+  const d = new Date(now), year = d.getUTCFullYear(), month = d.getUTCMonth()+1;
+  if(feed.season === 'nba') return year + (month >= 7 ? 1 : 0); // league season is named for its ending year
+  if(feed.season === 'nfl') return month <= 2 ? year - 1 : year;
+  return month >= 7 ? year : year - 1; // soccer season starts in the second half of the year
+}
+async function fetchLeagueSchedule(id){
+  const feed = TEAM_SCHEDULES[id];
+  if(!feed) return [];
+  const season = scheduleSeason(feed, Date.now());
+  const url = `https://site.api.espn.com/apis/site/v2/sports/${feed.path}/teams/${feed.team}/schedule?season=${season}`;
+  const r = await fetchT(url, 12000);
+  if(!r.ok) throw 0;
+  const data = await r.json(), rows = data.events || [];
+  return rows.map(event=>{
+    const c = (event.competitions || [])[0], sides = c?.competitors || [];
+    const home = sides.find(x=>x.homeAway === 'home') || sides[0], away = sides.find(x=>x.homeAway === 'away') || sides[1];
+    if(!home || !away) return null;
+    const complete = !!c.status?.type?.completed;
+    const score = x => complete && x.score != null ? Number(x.score.value ?? x.score.displayValue) : null;
+    return {
+      idEvent:'espn:'+event.id, strTimestamp:event.date,
+      strHomeTeam:home.team.displayName, strAwayTeam:away.team.displayName,
+      idHomeTeam:String(home.team.id) === String(feed.team) ? id : 'espn:'+home.team.id,
+      idAwayTeam:String(away.team.id) === String(feed.team) ? id : 'espn:'+away.team.id,
+      intHomeScore:score(home), intAwayScore:score(away),
+      strStatus:complete ? 'FT' : (c.status?.type?.shortDetail || ''),
+      strVenue:c.venue?.fullName || '', strLeague:data.league?.name || data.season?.name || ''
+    };
+  }).filter(Boolean);
+}
 async function loadMatches(){
-  // never throw away a good fixture or result on a failed refresh
+  // Use full league schedules for scores (including away matches); fall back to the free team feed for future fixtures.
   let answered = 0;
-  await Promise.all(CONFIG.teamIds.map(async id=>{
+  for(let i=0; i<CONFIG.teamIds.length; i++){
+    const id = CONFIG.teamIds[i];
     try{
-      const ev = await fetchNext(id); answered++;
-      if(ev){ if(MATCHES[id] && MATCHES[id].idEvent !== ev.idEvent) keepResult(id, MATCHES[id]); MATCHES[id] = ev; }
+      const schedule = await fetchLeagueSchedule(id); answered++;
+      LEAGUE_SCHEDULES[id] = true;
+      if(schedule.length){
+        const now = Date.now();
+        const completed = schedule.filter(ev=>ev.intHomeScore != null && ev.intAwayScore != null && toDate(ev).getTime() < now)
+          .sort((a,b)=>toDate(b)-toDate(a));
+        RESULTS[id] = completed.slice(0,8);
+        const upcoming = schedule.filter(ev=>toDate(ev).getTime() > now && !/postponed|cancelled|canceled/i.test(ev.strStatus || ''))
+          .sort((a,b)=>toDate(a)-toDate(b));
+        if(upcoming.length) MATCHES[id] = upcoming[0];
+      }
     }catch(e){}
-    try{ const l = await fetchLast(id); answered++; if(l.length) RESULTS[id] = l; }catch(e){}
-  }));
+    if(!MATCHES[id] || toDate(MATCHES[id]).getTime() <= Date.now()){
+      try{
+        const ev = await fetchNext(id); answered++;
+        if(ev) MATCHES[id] = ev;
+      }catch(e){}
+    }
+    if(i < CONFIG.teamIds.length - 1) await new Promise(resolve => setTimeout(resolve, 1000));
+  }
   if(!answered && CONFIG.teamIds.length) return;    // offline: keep what is shown (the saved panels)
   MATCHES_LOADED = true;
   renderMatches();
   if(CONFIG.panel === 'matches') renderPanel(false);
+}
+
+// The next Grand Prix weekend and every F1 session, converted from UTC to this TV's timezone.
+const F1_API = 'https://api.openf1.org/v1';
+const F1_SESSION_NAMES = {
+  'Practice 1':'تجارب حرة ١','Practice 2':'تجارب حرة ٢','Practice 3':'تجارب حرة ٣',
+  'Qualifying':'التصفيات التأهيلية','Sprint Qualifying':'تصفيات السبرنت','Sprint Shootout':'تصفيات السبرنت',
+  'Sprint':'سباق السبرنت','Race':'السباق'
+};
+function f1When(iso, withTime){
+  const date = new Date(iso);
+  const day = new Intl.DateTimeFormat(GREG,{timeZone:CONFIG.timezone,weekday:'short',day:'numeric',month:'short'}).format(date);
+  if(!withTime) return day;
+  const p = new Intl.DateTimeFormat('en-GB',{timeZone:CONFIG.timezone,hour:'2-digit',minute:'2-digit',hour12:false})
+    .formatToParts(date).reduce((a,x)=>(a[x.type]=x.value,a),{});
+  return fmt12(+p.hour % 24,+p.minute);
+}
+async function loadF1(){
+  const panel = document.getElementById('f1-panel');
+  try{
+    const year = riyadhParts().y, now = Date.now();
+    const seasons = (await Promise.allSettled([year,year+1].map(async y=>{
+      const r = await fetchT(`${F1_API}/meetings?year=${y}`,12000);
+      if(!r.ok) throw 0;
+      return r.json();
+    }))).filter(x=>x.status === 'fulfilled').flatMap(x=>x.value || []);
+    const meeting = seasons.filter(m=>!m.is_cancelled && Date.parse(m.date_end || m.date_start) >= now)
+      .sort((a,b)=>Date.parse(a.date_start)-Date.parse(b.date_start))[0];
+    if(!meeting) throw 0;
+    const sr = await fetchT(`${F1_API}/sessions?meeting_key=${meeting.meeting_key}`,12000);
+    if(!sr.ok) throw 0;
+    const sessions = (await sr.json()).filter(s=>!s.is_cancelled && F1_SESSION_NAMES[s.session_name])
+      .sort((a,b)=>Date.parse(a.date_start)-Date.parse(b.date_start));
+    if(!sessions.some(s=>s.session_name === 'Race')) throw 0;
+    const raceName = (meeting.meeting_name || meeting.meeting_official_name || 'Formula 1').replace(/\s+20\d{2}$/,'');
+    const place = [meeting.location,meeting.country_name].filter(Boolean).join('، ');
+    panel.innerHTML = `<div class="f1-head"><div class="f1-title">${esc(raceName)}</div><div class="f1-location">${esc(place)}</div></div>`
+      + `<div class="f1-sessions">${sessions.map(s=>`<div class="f1-session"><span class="f1-day">${f1When(s.date_start,false)}</span><span class="f1-session-name">${F1_SESSION_NAMES[s.session_name]}</span><span class="f1-time">${f1When(s.date_start,true)}</span></div>`).join('')}</div>`;
+  }catch(e){
+    if(!panel.querySelector('.f1-sessions')) panel.innerHTML = '<div class="f1-empty">تعذّر تحميل جدول الفورمولا ١</div>';
+  }
 }
 
 const TICKERS = [
@@ -999,9 +1161,9 @@ function renderPanel(animate){
     ul.innerHTML = `<li class="empty">${P === 'matches' ? 'لا مباريات هذا الأسبوع' : 'لا تتوفر بيانات الآن'}</li>`;
     return;
   }
-  if(P === 'matches' && rows.length > WEEK_ROWS){        // page through, like the shows
-    const start = (LIST_PAGE * WEEK_ROWS) % rows.length;
-    rows = Array.from({length: WEEK_ROWS}, (_, i) => rows[(start + i) % rows.length]);
+  if(P === 'matches' && rows.length > 1){
+    const start = LIST_PAGE % rows.length;
+    rows = [rows[start]];
   }
   ul.innerHTML = rows.join('');
   ul.classList.remove('flip');
@@ -1031,32 +1193,39 @@ function forecastRows(){
   });
 }
 
-// every followed team's games this week, plus results from the last day, in time order
+// upcoming fixture for each followed team, shown one team at a time
 function matchRows(){
-  const now = Date.now(), seen = new Set(), evs = [];
-  CONFIG.teamIds.forEach(id => {
-    const next = NEXT_LIST[id] || (MATCHES[id] ? [MATCHES[id]] : []);
-    next.forEach(ev => { if(ev && ev.idEvent && !seen.has(ev.idEvent)){ seen.add(ev.idEvent); evs.push(MATCHES[id] && MATCHES[id].idEvent === ev.idEvent ? MATCHES[id] : ev); } });
-    resultsFor(id).forEach(ev => { if(!seen.has(ev.idEvent)){ seen.add(ev.idEvent); evs.push(ev); } });
-  });
-  const day = d => new Intl.DateTimeFormat(GREG, {timeZone:CONFIG.timezone, weekday:'long'}).format(d);
-  const today = new Intl.DateTimeFormat('en-CA', {timeZone:CONFIG.timezone}).format(new Date());
-  return evs.map(ev => ({ev, t: toDate(ev).getTime()}))
-    .filter(x => finishedRecently(x.ev, now)
-      || (now < x.t + 2.5*3600000 && !FINAL.includes((x.ev.strStatus || '').toUpperCase())
-          && x.t - now <= CONFIG.weekWindowDays * 86400000))
-    .sort((a, b) => a.t - b.t)
-    .map(({ev, t}) => {
-      const d = new Date(t), scored = ev.intHomeScore != null && ev.intAwayScore != null;
-      const mid = scored && now >= t ? ` <span class="sc">${ar(+ev.intHomeScore)} - ${ar(+ev.intAwayScore)}</span> ` : ' × ';
-      const p = new Intl.DateTimeFormat('en-GB', {timeZone:CONFIG.timezone, hour:'2-digit', minute:'2-digit', hour12:false})
-        .formatToParts(d).reduce((a, x) => (a[x.type] = x.value, a), {});
-      const when = finishedRecently(ev, now) ? 'انتهت'
-        : now >= t ? '<span class="live">مباشر</span>'
-        : (new Intl.DateTimeFormat('en-CA', {timeZone:CONFIG.timezone}).format(d) === today ? 'اليوم' : day(d))
-          + ' ' + fmt12(+p.hour % 24, +p.minute);
-      return `<li><span>${esc(teamAr(ev.strHomeTeam, ev.idHomeTeam))}${mid}${esc(teamAr(ev.strAwayTeam, ev.idAwayTeam))}</span><span class="dt">${when}</span></li>`;
-    });
+  const now = Date.now();
+  return CONFIG.teamIds.map(id => {
+    const ev = MATCHES[id] || (NEXT_LIST[id] || []).find(item => toDate(item).getTime() > now);
+    const lastPool = LEAGUE_SCHEDULES[id] ? (RESULTS[id] || []) : [...(RESULTS[id] || []), ...(KEPT[id] || [])];
+    const last = lastPool
+      .filter(item => item && item.intHomeScore != null && item.intAwayScore != null && toDate(item).getTime() < now)
+      .sort((a,b)=>toDate(b)-toDate(a))[0];
+    let upcoming = '';
+    if(ev){
+      const t = toDate(ev).getTime();
+      if(Number.isFinite(t) && t > now){
+        const isHome = String(ev.idHomeTeam) === String(id);
+        const team = teamAr(isHome ? ev.strHomeTeam : ev.strAwayTeam, id);
+        const opponent = teamAr(isHome ? ev.strAwayTeam : ev.strHomeTeam, isHome ? ev.idAwayTeam : ev.idHomeTeam);
+        const d = new Date(t);
+        const parts = new Intl.DateTimeFormat('en-GB', {timeZone:CONFIG.timezone, hour:'2-digit', minute:'2-digit', hour12:false})
+          .formatToParts(d).reduce((a, x) => (a[x.type] = x.value, a), {});
+        const date = new Intl.DateTimeFormat(GREG, {timeZone:CONFIG.timezone, weekday:'long', day:'numeric', month:'long'}).format(d);
+        const when = `${date} · ${fmt12(+parts.hour % 24, +parts.minute)}`;
+        const venue = ev.strVenue ? esc(ev.strVenue) : 'الملعب غير متاح';
+        upcoming = `<div class="match-title"><span>${esc(team)}</span><span class="versus">×</span><span>${esc(opponent)}</span></div><div class="match-meta"><span class="match-status">${when}</span><span class="match-venue">الملعب: ${venue}</span></div>`;
+      }
+    }
+    let lastHtml = '';
+    if(last){
+      const score = `${ar(+last.intHomeScore)} - ${ar(+last.intAwayScore)}`;
+      const names = `${teamAr(last.strHomeTeam,last.idHomeTeam)} ${score} ${teamAr(last.strAwayTeam,last.idAwayTeam)}`;
+      lastHtml = `<div class="match-last">آخر مباراة: ${esc(names)}</div>`;
+    }
+    return upcoming || lastHtml ? `<li class="match">${upcoming || '<div class="match-title">لا توجد مباراة قادمة</div>'}${lastHtml}</li>` : '';
+  }).filter(Boolean);
 }
 
 // verse one day, hadith the next. Verse texts come from the Quran API via CI (.github/tools/fetch_verses.py), never typed.
@@ -1071,9 +1240,23 @@ function quoteOfDay(){
     return {title:'آية اليوم', rows:[`<li class="quote"><span class="orn">﴿</span>${esc(v.text)}<span class="orn">﴾</span></li>`, `<li class="src">${esc(v.surah)} · ${ar(v.ayah)}</li>`]};
   }
   const h = HADITH[half % HADITH.length];
-  const saw = s => s.replace(/ﷺ/g, '<span class="saw">ﷺ</span>').replace(/[﴿﴾]/g, m => `<span class="orn">${m}</span>`);
-  const body = h.parts.map(([k, t]) => k === 'q' ? `«${saw(esc(t))}»` : `<span class="nar">${saw(esc(t))}</span>`).join(' ');
+  const body = hadithBody(h);
   return {title:'حديث اليوم', rows:[`<li class="quote hadith">${body}</li>`, `<li class="src">${esc(h.source)}</li>`]};
+}
+function hadithBody(h){
+  const saw = s => s.replace(/ﷺ/g, '<span class="saw">ﷺ</span>').replace(/[﴿﴾]/g, m => `<span class="orn">${m}</span>`);
+  return h.parts.map(([k, t]) => k === 'q' ? `«${saw(esc(t))}»` : `<span class="nar">${saw(esc(t))}</span>`).join(' ');
+}
+let CORNER_HADITH = -1;
+function renderCornerHadith(advance=false){
+  const text = document.getElementById('corner-hadith-text'), source = document.getElementById('corner-hadith-source');
+  if(!text || !source) return;
+  if(!HADITH.length){ text.textContent = 'لا تتوفر أحاديث الآن'; source.textContent = ''; return; }
+  CORNER_HADITH = advance && CORNER_HADITH >= 0 ? (CORNER_HADITH + 1) % HADITH.length : riyadhDayNumber() % HADITH.length;
+  const h = HADITH[CORNER_HADITH];
+  text.innerHTML = hadithBody(h);
+  source.textContent = h.source;
+  text.classList.remove('changing'); void text.offsetWidth; text.classList.add('changing');
 }
 
 const WX_CODES = {
@@ -1227,8 +1410,8 @@ function applyBackground(force){
 }
 
 // Last painted panels, shown at once on the next start while fresh data loads.
-const SNAP_KEY = 'snap3:' + location.hash;   // bump when the panels' markup changes
-const SNAP_SEL = ['.markets', '#week-list', '#match-row'];
+const SNAP_KEY = 'snap8:' + location.hash;   // refresh the current match layout
+const SNAP_SEL = ['.markets', '#week-list', '#match-row', '#f1-panel'];
 function saveSnap(){
   try{ localStorage.setItem(SNAP_KEY, JSON.stringify(SNAP_SEL.map(q => (document.querySelector(q)||{}).innerHTML || ''))); }catch(e){}
 }
@@ -1239,8 +1422,16 @@ function restoreSnap(){
   }catch(e){}
 }
 
+function setMatchLayout(){
+  if(CONFIG.panel !== 'matches') return;
+  document.querySelector('.stage').classList.add('matches-mode');
+  document.querySelector('.week').classList.add('matches-view');
+}
+
 function boot(){
   if(CONFIG.widget){ bootWidget(); return; }
+  setMatchLayout();
+  if(CONFIG.panel === 'matches') renderCornerHadith();
   restoreSnap();
   setTimeout(saveSnap, 15*1000);   // the dream can be killed before pagehide
   setInterval(saveSnap, 60*1000);
@@ -1257,34 +1448,38 @@ function boot(){
   TICKERS.forEach(loadTicker);
   if(CONFIG.panel === 'none') document.querySelector('.week').style.display = 'none';
   else if(CONFIG.panel !== 'shows') renderPanel(false);   // its own data arrives with prayers, weather, matches
-  loadPrayers(); loadMatches(); if(CONFIG.panel === 'shows') loadWeek(); loadWeather();
+  loadPrayers(); loadMatches(); loadF1(); if(CONFIG.panel === 'shows') loadWeek(); loadWeather();
   applyNight(); pixelShift();
 
   setInterval(tickClock, 1000);
-  setInterval(()=>{ tickDates(); tickPrayer(); tickRamadan(); if(CONFIG.panel === 'prayers') renderPanel(false); }, 15000);
+  setInterval(()=>{ tickDates(); tickRamadan(); if(CONFIG.panel === 'prayers') renderPanel(false); }, 15000);
+  setInterval(tickPrayer, 1000);
+  if(CONFIG.panel === 'matches') setInterval(() => renderCornerHadith(true), 3*60*1000);
   setInterval(() => renderMatches(false), 60000);
   setInterval(() => renderMatches(true), CONFIG.matchPageMs);
   setInterval(loadLive, 2*60000);
   setInterval(loadPrayers, 6*3600*1000);
   setInterval(loadMatches, 30*60*1000);
+  setInterval(loadF1, 6*3600*1000);
   setInterval(()=>TICKERS.forEach(loadTicker), 15*60*1000);
   if(CONFIG.panel === 'shows') setInterval(loadWeek, 6*3600*1000);
   setInterval(loadWeather, 30*60*1000);
   setInterval(()=>{
     if(CONFIG.panel === 'shows' && WEEK_POOL.length > WEEK_ROWS){ WEEK_PAGE++; renderWeekPage(true); }
-    if(CONFIG.panel === 'matches'){ LIST_PAGE++; renderPanel(matchRows().length > WEEK_ROWS); }
   }, 25*1000);
+  if(CONFIG.panel === 'matches') setInterval(()=>{ LIST_PAGE++; renderPanel(matchRows().length > 1); }, CONFIG.matchPageMs);
   setInterval(applyNight, 60*1000);
   setInterval(pixelShift, 4*60*1000);
   let lastDay = new Intl.DateTimeFormat('en-CA',{timeZone:CONFIG.timezone}).format(new Date());
   setInterval(()=>{
     const d = new Intl.DateTimeFormat('en-CA',{timeZone:CONFIG.timezone}).format(new Date());
-    if(d !== lastDay){ lastDay = d; loadPhotoIndex().then(() => applyBackground(true)); tickDates(); tickRamadan(); loadPrayers(); loadMatches(); if(CONFIG.panel === 'shows') loadWeek(); loadWeather(); renderPanel(false); }
+    if(d !== lastDay){ lastDay = d; loadPhotoIndex().then(() => applyBackground(true)); tickDates(); tickRamadan(); loadPrayers(); loadMatches(); loadF1(); if(CONFIG.panel === 'shows') loadWeek(); loadWeather(); renderPanel(false); }
   }, 60*1000);
 }
 
 // The launcher's card: the chosen panel only, refreshed like on the screensaver, nothing else loaded.
 function bootWidget(){
+  setMatchLayout();
   document.documentElement.classList.add('widget');
   restoreSnap();
   setTimeout(saveSnap, 15*1000);
@@ -1298,8 +1493,8 @@ function bootWidget(){
   if(P === 'matches'){ loadMatches(); setInterval(loadMatches, 30*60*1000); setInterval(loadLive, 2*60000); }
   setInterval(() => {
     if(P === 'shows' && WEEK_POOL.length > WEEK_ROWS){ WEEK_PAGE++; renderWeekPage(true); }
-    if(P === 'matches'){ LIST_PAGE++; renderPanel(matchRows().length > WEEK_ROWS); }
   }, 25*1000);
+  if(P === 'matches') setInterval(()=>{ LIST_PAGE++; renderPanel(matchRows().length > 1); }, CONFIG.matchPageMs);
   let lastDay = riyadhDayNumber();
   setInterval(() => { if(riyadhDayNumber() !== lastDay){ lastDay = riyadhDayNumber(); if(P === 'prayers') loadPrayers(); renderPanel(false); } }, 60*1000);
   reveal();
