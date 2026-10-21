@@ -19,6 +19,10 @@ public class ScreenDream extends DreamService {
 
     @Override
     public void onDetachedFromWindow() {
+        // A recitation started from the screensaver's schedule stops here —
+        // predictable UX: any button dismisses the Dream and ends the Quran.
+        // A manually started dialog session is independent and untouched.
+        UrTvBridge.onScreensaverDismissed(this);
         if (web != null) { web.destroy(); web = null; }
         super.onDetachedFromWindow();
     }

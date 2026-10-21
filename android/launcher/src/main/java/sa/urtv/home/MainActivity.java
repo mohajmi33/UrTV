@@ -314,14 +314,16 @@ public class MainActivity extends Activity {
         right.setClipChildren(false);
         TextView saver = pill("شاشة التوقف", R.drawable.ic_screensaver);
         saver.setOnClickListener(v -> openPackage(SAVER_PKG));
+        TextView quran = pill("القرآن", R.drawable.ic_quran);
+        quran.setOnClickListener(v -> QuranDialog.build(this).show());
         TextView inputs = pill("المصادر", R.drawable.ic_input);
         inputs.setOnClickListener(v -> showInputs(v));
         wifiPill = pill("واي فاي", R.drawable.ic_wifi);
         wifiPill.setOnClickListener(v -> launch(new Intent(Settings.ACTION_WIFI_SETTINGS)));
         TextView settings = pill("الإعدادات", R.drawable.ic_settings);
         settings.setOnClickListener(v -> launch(new Intent(Settings.ACTION_SETTINGS)));
-        for (TextView p : isInstalled(SAVER_PKG) ? new TextView[]{inputs, wifiPill, settings, saver}
-                                                  : new TextView[]{inputs, wifiPill, settings}) {
+        for (TextView p : isInstalled(SAVER_PKG) ? new TextView[]{inputs, wifiPill, settings, quran, saver}
+                                                  : new TextView[]{inputs, wifiPill, settings, quran}) {
             right.addView(p, llp(-2, dp(30), dp(10), 0, 0, 0));
             pills.add(p);
         }
@@ -672,11 +674,7 @@ public class MainActivity extends Activity {
         }
         Collections.sort(inputs, (x, y) -> inputLabel(x).compareToIgnoreCase(inputLabel(y)));
         for (TvInputInfo t : inputs) {
-            rows.add(inputRow(inputLabel(t), () -> {
-                Intent i = new Intent(Intent.ACTION_VIEW, TvContract.buildChannelUriForPassthroughInput(t.getId()));
-                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                if (!launch(i)) openPackage(inputPickerPkg);
-            }));
+            rows.add(inputRow(inputLabel(t), () -> openPassthroughInput(t)));
         }
         if (isInstalled(liveTvPkg)) rows.add(inputRow("البث التلفزيوني", () -> openPackage(liveTvPkg)));
         if (inputs.isEmpty() && isInstalled(inputPickerPkg)) rows.add(inputRow("كل المصادر…", () -> openPackage(inputPickerPkg)));
@@ -991,6 +989,34 @@ public class MainActivity extends Activity {
     }
 
     // ---------------------------------------------------------------- helpers
+
+    /** Switch to a passthrough input (HDMI1, HDMI2, AV, …). The standard
+     *  TvContract passthrough URI only resolves when a Live-TV app registers
+     *  it as implicit; some vendor TV apps (TCL's com.tcl.tv/.TVActivity on
+     *  this hardware) handle it only when the intent names the component
+     *  explicitly. Try the implicit intent first, then every candidate
+     *  activity in the configured live_tv_package, then fall back to the
+     *  input picker package. */
+    private void openPassthroughInput(TvInputInfo t) {
+        Intent base = new Intent(Intent.ACTION_VIEW, TvContract.buildChannelUriForPassthroughInput(t.getId()));
+        base.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        if (launch(base)) return;
+        if (liveTvPkg != null && !liveTvPkg.isEmpty() && isInstalled(liveTvPkg)) {
+            // Query every activity in the Live-TV package that advertises VIEW
+            // and try each with the URI, newest APIs first.
+            Intent probe = new Intent(Intent.ACTION_VIEW).setPackage(liveTvPkg);
+            List<ResolveInfo> handlers = getPackageManager().queryIntentActivities(probe,
+                    PackageManager.MATCH_DEFAULT_ONLY);
+            for (ResolveInfo ri : handlers) {
+                Intent explicit = new Intent(Intent.ACTION_VIEW,
+                        TvContract.buildChannelUriForPassthroughInput(t.getId()));
+                explicit.setClassName(ri.activityInfo.packageName, ri.activityInfo.name);
+                explicit.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                if (launch(explicit)) return;
+            }
+        }
+        openPackage(inputPickerPkg);
+    }
 
     private boolean launch(Intent i) {
         try {

@@ -1309,6 +1309,118 @@ document.addEventListener('keydown', e=>{
 });
 
 boot();
+
+/* ============ QURAN SCHEDULER (added by Claude for the user) ============ */
+const QURAN_CFG = {
+  reciter: 'abdullah-qarafi',   // Al-Qurafi
+  surah: 2,                     // Al-Baqara
+  playAt9AM: true,
+  playAtPrayers: true,
+  showIndicator: true
+};
+const quranAudio = new Audio();
+quranAudio.preload = 'none';
+quranAudio.crossOrigin = 'anonymous';
+let quranPlaying = false;
+let quranFiredKey = null;
+function quranUrl(){
+  return `https://cdn.mp3quran.net/audio/${QURAN_CFG.reciter}/r1/${String(QURAN_CFG.surah).padStart(3,'0')}.mp3`;
+}
+function quranPlay(){
+  // Prefer the native service: it owns a foreground MediaPlayer that keeps playing
+  // after the Dream is dismissed, so the user controls stop from the launcher's
+  // «القرآن» pill (same place they'd start it) instead of «any button stops it».
+  if (window.UrTvHost && typeof UrTvHost.playQuran === 'function') {
+    try {
+      if (UrTvHost.playQuran(QURAN_CFG.reciter, QURAN_CFG.surah)) {
+        quranPlaying = true; quranIndicator(true); return;
+      }
+    } catch(e){}
+  }
+  // Fallback for plain browsers (dashboard URL opened in TV Bro): HTML5 audio.
+  try { quranAudio.src = quranUrl(); } catch(e){ return; }
+  const p = quranAudio.play();
+  if (p && p.then) p.then(()=>{ quranPlaying = true; quranIndicator(true); }).catch(()=>{});
+}
+function quranStop(){
+  if (window.UrTvHost && typeof UrTvHost.stopQuran === 'function') {
+    try { UrTvHost.stopQuran(); } catch(e){}
+  }
+  try { quranAudio.pause(); quranAudio.currentTime = 0; } catch(e){}
+  quranPlaying = false;
+  quranIndicator(false);
+}
+function quranIndicator(on){
+  if(!QURAN_CFG.showIndicator) return;
+  let dot = document.getElementById('quran-dot');
+  if(!dot){
+    const s = document.createElement('style');
+    s.textContent = '@keyframes qpulse{0%,100%{opacity:.3}50%{opacity:1}}#quran-dot{position:fixed;top:3vh;right:3.6vw;z-index:100;width:1vh;height:1vh;border-radius:50%;background:#DCB86F;box-shadow:0 0 2vh #DCB86F;animation:qpulse 1.4s ease-in-out infinite;opacity:0;transition:opacity .4s ease;pointer-events:none}';
+    document.head.appendChild(s);
+    dot = document.createElement('div');
+    dot.id = 'quran-dot';
+    document.body.appendChild(dot);
+  }
+  dot.style.opacity = on ? '1' : '0';
+}
+// Read the current wall-clock HH:MM in CONFIG.timezone, matching how DAY_TIMES is
+// computed, so the schedule works for any configured city (Jeddah, Dammam, Mecca…),
+// not just Riyadh.
+function quranNowHHMM(){
+  const parts = new Intl.DateTimeFormat('en-GB',{
+    timeZone: CONFIG.timezone, hour:'2-digit', minute:'2-digit', hour12:false
+  }).formatToParts(new Date());
+  const hh = parts.find(p=>p.type==='hour').value;
+  const mm = parts.find(p=>p.type==='minute').value;
+  return hh + ':' + mm;
+}
+function quranDayKey(){
+  return new Intl.DateTimeFormat('en-CA',{timeZone: CONFIG.timezone}).format(new Date());
+}
+function quranTick(){
+  if(typeof DAY_TIMES === 'undefined' || !DAY_TIMES) return;
+  const cur = quranNowHHMM();
+  const key = quranDayKey() + '|' + cur;
+  if(quranFiredKey === key) return;
+  let fire = false;
+  if(QURAN_CFG.playAt9AM && cur === '09:00') fire = true;
+  if(QURAN_CFG.playAtPrayers){
+    for(const k of ['Fajr','Dhuhr','Asr','Maghrib','Isha']){
+      if(DAY_TIMES[k] && String(DAY_TIMES[k]).substring(0,5) === cur){ fire = true; break; }
+    }
+  }
+  if(fire){ quranFiredKey = key; if(!quranPlaying) quranPlay(); }
+}
+// Unlock audio on load (plays a silent buffer so autoplay works later)
+setTimeout(() => {
+  try {
+    const s = new Audio("data:audio/mp3;base64,SUQzAwAAAAAAAFRJVDIAAAABAAAAVFNTRQAAAAEAAAB//////////////////////////////////////////////////////////////////////////////////////////////////////////////////w==");
+    s.volume = 0;
+    s.play().catch(()=>{});
+  } catch(e){}
+}, 800);
+setInterval(quranTick, 15000);
+// Auto-advance to the next surah when one ends, so the recitation keeps going
+// (Al-Baqara → Aal-Imran → …). Stops after An-Nas or if the Dream is dismissed.
+quranAudio.addEventListener('ended', () => {
+  if (QURAN_CFG.surah < 114 && document.visibilityState !== 'hidden') {
+    QURAN_CFG.surah += 1;
+    try {
+      quranAudio.src = quranUrl();
+      const p = quranAudio.play();
+      if (p && p.then) p.then(()=>{ quranPlaying = true; quranIndicator(true); }).catch(()=>{});
+    } catch(e) { quranPlaying = false; quranIndicator(false); }
+  } else {
+    quranPlaying = false;
+    quranIndicator(false);
+  }
+});
+// Previously stopped on visibilitychange, which killed the recitation the moment
+// the user pressed any button to dismiss the screensaver. The native QuranService
+// keeps playing after the WebView is destroyed; the user stops it from the
+// launcher's «القرآن» pill. For the plain-browser fallback (no UrTvHost), the
+// WebView tear-down stops HTML5 audio naturally.
+/* ============ END QURAN SCHEDULER ============ */
 </script>
 </body>
 </html>

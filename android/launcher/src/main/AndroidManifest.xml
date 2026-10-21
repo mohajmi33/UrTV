@@ -3,6 +3,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />   <!-- hosted wallpapers, the optional card -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />   <!-- so long Quran recitations don't drop when the TV dozes -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />   <!-- QuranService -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- Android 11 only reveals the Wi-Fi name to apps holding location; granted over ADB at install. -->
@@ -68,6 +72,18 @@
             android:label="ترتيب المفضلة"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Material.NoActionBar" />
+
+        <!-- Keeps the Quran recitation running when the screensaver dismisses or the dialog closes.
+             Exported so the screensaver's JS bridge can start it. -->
+        <service
+            android:name=".QuranService"
+            android:exported="true"
+            android:foregroundServiceType="mediaPlayback">
+            <intent-filter>
+                <action android:name="sa.urtv.home.QURAN_PLAY" />
+                <action android:name="sa.urtv.home.QURAN_STOP" />
+            </intent-filter>
+        </service>
 
         <!-- favourites row from ADB (agents, optimize/dock.sh); DUMP = only the shell can send it -->
         <receiver
